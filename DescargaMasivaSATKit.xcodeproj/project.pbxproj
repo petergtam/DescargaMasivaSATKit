@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC26D2342E68A34E00E71C6B /* DescargaMasivaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC26D2282E68A34D00E71C6B /* DescargaMasivaKit.framework */; };
+		EC26D2342E68A34E00E71C6B /* DescargaMasivaSATKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC26D2282E68A34D00E71C6B /* DescargaMasivaSATKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,19 +21,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EC26D2282E68A34D00E71C6B /* DescargaMasivaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DescargaMasivaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC26D2332E68A34E00E71C6B /* DescargaMasivaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DescargaMasivaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC26D2282E68A34D00E71C6B /* DescargaMasivaSATKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DescargaMasivaSATKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC26D2332E68A34E00E71C6B /* DescargaMasivaSATKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DescargaMasivaSATKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EC26D22A2E68A34D00E71C6B /* DescargaMasivaKit */ = {
+		EC26D22A2E68A34D00E71C6B /* DescargaMasivaSATKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DescargaMasivaKit;
+			path = DescargaMasivaSATKit;
 			sourceTree = "<group>";
 		};
-		EC26D2372E68A34E00E71C6B /* DescargaMasivaKitTests */ = {
+		EC26D2372E68A34E00E71C6B /* DescargaMasivaSATKitTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DescargaMasivaKitTests;
+			path = DescargaMasivaSATKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC26D2342E68A34E00E71C6B /* DescargaMasivaKit.framework in Frameworks */,
+				EC26D2342E68A34E00E71C6B /* DescargaMasivaSATKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +60,8 @@
 		EC26D21E2E68A34D00E71C6B = {
 			isa = PBXGroup;
 			children = (
-				EC26D22A2E68A34D00E71C6B /* DescargaMasivaKit */,
-				EC26D2372E68A34E00E71C6B /* DescargaMasivaKitTests */,
+				EC26D22A2E68A34D00E71C6B /* DescargaMasivaSATKit */,
+				EC26D2372E68A34E00E71C6B /* DescargaMasivaSATKitTests */,
 				EC26D2292E68A34D00E71C6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,8 +69,8 @@
 		EC26D2292E68A34D00E71C6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC26D2282E68A34D00E71C6B /* DescargaMasivaKit.framework */,
-				EC26D2332E68A34E00E71C6B /* DescargaMasivaKitTests.xctest */,
+				EC26D2282E68A34D00E71C6B /* DescargaMasivaSATKit.framework */,
+				EC26D2332E68A34E00E71C6B /* DescargaMasivaSATKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,9 +88,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EC26D2272E68A34D00E71C6B /* DescargaMasivaKit */ = {
+		EC26D2272E68A34D00E71C6B /* DescargaMasivaSATKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC26D23C2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaKit" */;
+			buildConfigurationList = EC26D23C2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaSATKit" */;
 			buildPhases = (
 				EC26D2232E68A34D00E71C6B /* Headers */,
 				EC26D2242E68A34D00E71C6B /* Sources */,
@@ -102,18 +102,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				EC26D22A2E68A34D00E71C6B /* DescargaMasivaKit */,
+				EC26D22A2E68A34D00E71C6B /* DescargaMasivaSATKit */,
 			);
-			name = DescargaMasivaKit;
+			name = DescargaMasivaSATKit;
 			packageProductDependencies = (
 			);
 			productName = DescargaMasivaKit;
-			productReference = EC26D2282E68A34D00E71C6B /* DescargaMasivaKit.framework */;
+			productReference = EC26D2282E68A34D00E71C6B /* DescargaMasivaSATKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EC26D2322E68A34E00E71C6B /* DescargaMasivaKitTests */ = {
+		EC26D2322E68A34E00E71C6B /* DescargaMasivaSATKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC26D23F2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaKitTests" */;
+			buildConfigurationList = EC26D23F2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaSATKitTests" */;
 			buildPhases = (
 				EC26D22F2E68A34E00E71C6B /* Sources */,
 				EC26D2302E68A34E00E71C6B /* Frameworks */,
@@ -125,13 +125,13 @@
 				EC26D2362E68A34E00E71C6B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				EC26D2372E68A34E00E71C6B /* DescargaMasivaKitTests */,
+				EC26D2372E68A34E00E71C6B /* DescargaMasivaSATKitTests */,
 			);
-			name = DescargaMasivaKitTests;
+			name = DescargaMasivaSATKitTests;
 			packageProductDependencies = (
 			);
 			productName = DescargaMasivaKitTests;
-			productReference = EC26D2332E68A34E00E71C6B /* DescargaMasivaKitTests.xctest */;
+			productReference = EC26D2332E68A34E00E71C6B /* DescargaMasivaSATKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC26D2222E68A34D00E71C6B /* Build configuration list for PBXProject "DescargaMasivaKit" */;
+			buildConfigurationList = EC26D2222E68A34D00E71C6B /* Build configuration list for PBXProject "DescargaMasivaSATKit" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -166,8 +166,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC26D2272E68A34D00E71C6B /* DescargaMasivaKit */,
-				EC26D2322E68A34E00E71C6B /* DescargaMasivaKitTests */,
+				EC26D2272E68A34D00E71C6B /* DescargaMasivaSATKit */,
+				EC26D2322E68A34E00E71C6B /* DescargaMasivaSATKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,7 +209,7 @@
 /* Begin PBXTargetDependency section */
 		EC26D2362E68A34E00E71C6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC26D2272E68A34D00E71C6B /* DescargaMasivaKit */;
+			target = EC26D2272E68A34D00E71C6B /* DescargaMasivaSATKit */;
 			targetProxy = EC26D2352E68A34E00E71C6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -440,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC26D2222E68A34D00E71C6B /* Build configuration list for PBXProject "DescargaMasivaKit" */ = {
+		EC26D2222E68A34D00E71C6B /* Build configuration list for PBXProject "DescargaMasivaSATKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC26D23A2E68A34E00E71C6B /* Debug */,
@@ -449,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC26D23C2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaKit" */ = {
+		EC26D23C2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaSATKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC26D23D2E68A34E00E71C6B /* Debug */,
@@ -458,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC26D23F2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaKitTests" */ = {
+		EC26D23F2E68A34E00E71C6B /* Build configuration list for PBXNativeTarget "DescargaMasivaSATKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC26D2402E68A34E00E71C6B /* Debug */,
