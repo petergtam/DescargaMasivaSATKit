@@ -1,5 +1,5 @@
 //
-//  VerificationResult.swift
+//  VerificationEndpointResult.swift
 //  Fidadces
 //
 //  Created by Pedro Ivan Salas Peña on 09/05/24.
@@ -7,11 +7,26 @@
 
 import Foundation
 
-enum VerificationResultError: Error {
-    case httpError(statusCode: Int?)
+struct VerificationEndpointResultError: Error {
+    private enum Code {
+        case httpError(statusCode: Int?)
+    }
+    
+    private let code: Code
+    
+    static func httpError(statusCode: Int?) -> VerificationEndpointResultError {
+        .init(code: .httpError(statusCode: statusCode))
+    }
+    
+    var localizedDescription: String {
+        switch code {
+        case .httpError(statusCode: let statusCode):
+            return "HTTP error: \(statusCode ?? 0)"
+        }
+    }
 }
 
-class VerificationResult: NSObject {
+class VerificationEndpointResult: NSObject {
 
     var data: Data?
     var response: HTTPURLResponse?
@@ -47,11 +62,11 @@ class VerificationResult: NSObject {
 
 }
 
-extension VerificationResult: XMLParserDelegate {
+extension VerificationEndpointResult: XMLParserDelegate {
 
     func parserDidEndDocument(_ parser: XMLParser) {
         if hasError {
-            completionHandler(nil, nil, VerificationResultError.httpError(statusCode: response?.statusCode))
+            completionHandler(nil, nil, VerificationEndpointResultError.httpError(statusCode: response?.statusCode))
         } else {
             if contents.count > 0 {
                 completionHandler(result, contents,nil)

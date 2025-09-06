@@ -7,9 +7,30 @@
 
 import Foundation
 
-enum AuthenticationResultError: Error {
-    case dateParsingFailed(contents: [String])
-    case httpError(statusCode: Int?, contents: [String])
+struct AuthenticationResultError: Error {
+    private enum Code {
+        case dateParsingFailed(contents: [String])
+        case httpError(statusCode: Int?, contents: [String])
+    }
+    
+    private let code: Code
+    
+    static func dateParsingFailed(contents: [String]) -> AuthenticationResultError {
+        .init(code: .dateParsingFailed(contents: contents))
+    }
+    
+    static func httpError(statusCode: Int?, contents: [String]) -> AuthenticationResultError {
+        .init(code: .httpError(statusCode: statusCode, contents: contents))
+    }
+    
+    var localizedDescription: String {
+        switch code {
+        case .dateParsingFailed(contents: let contents):
+            return "Failed to parse date from contents: \(contents)"
+        case .httpError(statusCode: let statusCode, contents: let contents):
+            return "HTTP error \(statusCode ?? 0), withContents: \(contents)"
+        }
+    }
 }
 
 class AuthenticationResult : NSObject {

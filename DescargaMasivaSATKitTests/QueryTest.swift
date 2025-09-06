@@ -15,7 +15,7 @@ final class QueryTest: XCTestCase {
         if let certUrl = Bundle(for: QueryTest.self).url(forResource: "certificate", withExtension: "cer"), let keyURL = Bundle(for: QueryTest.self).url(forResource: "privkey", withExtension: "key") {
             let certData = try Data(contentsOf: certUrl)
             let keyData = try Data(contentsOf: keyURL)
-            try AuthenticationManager.shared.addCertData(certData, keyData)
+            try AuthenticationManager.shared.add(certData: certData, keyData: keyData)
         }
     }
     
@@ -25,7 +25,7 @@ final class QueryTest: XCTestCase {
         params.operation = .emitidas
         params.endPoint = .facturas
         params.queryType = .metadata
-        let request = Query(params: params)
+        let request = QueryEndpoint(params: params)
         XCTAssertNotNil(request)
     }
     
@@ -34,7 +34,7 @@ final class QueryTest: XCTestCase {
             params.receiptStatus = .vigente
             params.operation = .recibidas
             params.endPoint = .facturas
-            let request = Query(params: params)
+            let request = QueryEndpoint(params: params)
             let result = try await request.request()
             XCTAssert(result.count > 0)
     }

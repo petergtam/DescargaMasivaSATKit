@@ -11,7 +11,7 @@ final class Authentication: XCTestCase {
         if let certUrl = Bundle(for: Authentication.self).url(forResource: "certificate", withExtension: ".cer"), let keyUrl = Bundle(for: Authentication.self).url(forResource: "privkey", withExtension: ".key") {
             let certData = try Data(contentsOf: certUrl)
             let keyData = try Data(contentsOf: keyUrl)
-            try AuthenticationManager.shared.addCertData(certData, keyData)
+            try AuthenticationManager.shared.add(certData: certData, keyData: keyData)
         }
     }
     
@@ -20,7 +20,7 @@ final class Authentication: XCTestCase {
             let certData = try Data(contentsOf: certUrl)
             let keyData = try Data(contentsOf: keyUrl)
             let certUtils = try CertUtils(certData: certData, keyData: keyData)
-            AuthenticationManager.shared.addCertUtils(certUtils)
+            AuthenticationManager.shared.add(certUtils: certUtils)
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  DownloadResult.swift
+//  DownloadEndpointResult.swift
 //  Fidadces
 //
 //  Created by Pedro Ivan Salas Peña on 11/05/24.
@@ -7,11 +7,26 @@
 
 import Foundation
 
-enum DownloadResultError : Error {
-    case httpError(statusCode: Int?)
+struct DownloadEndpointResultError : Error {
+    private enum Code {
+        case httpError(statusCode: Int?)
+    }
+    
+    private let code: Code
+    
+    static func httpError(statusCode: Int?) -> DownloadEndpointResultError {
+        .init(code: .httpError(statusCode: statusCode))
+    }
+    
+    var localizedDescription: String {
+        switch code {
+        case .httpError(statusCode: let statusCode):
+            return "HTTP error: \(statusCode ?? 0)"
+        }
+    }
 }
 
-class DownloadResult: NSObject {
+class DownloadEndpointResult: NSObject {
 
     var data: Data?
     var response: HTTPURLResponse?
@@ -47,11 +62,11 @@ class DownloadResult: NSObject {
 
 }
 
-extension DownloadResult: XMLParserDelegate {
+extension DownloadEndpointResult: XMLParserDelegate {
 
     func parserDidEndDocument(_ parser: XMLParser) {
         if hasError {
-            completionHandler(nil, nil, DownloadResultError.httpError(statusCode: response?.statusCode))
+            completionHandler(nil, nil, DownloadEndpointResultError.httpError(statusCode: response?.statusCode))
         } else {
             if contents.count > 0 {
                 completionHandler(result, contents, nil)

@@ -14,17 +14,56 @@ extension Data {
     }
 }
 
-enum CertUtilsError: Error {
-    case certificateCreationFailed
-    case notSupportedAlgorithm
-    case noRFC
-    case noIssuerName
+struct CertUtilsError: Error {
+    private enum Code {
+        case certificateCreationFailed
+        case notSupportedAlgorithm
+        case noRFC
+        case noIssuerName
+    }
+    
+    private let code: Code
+    
+    static var certificateCreationFailed: Self { .init(code: .certificateCreationFailed) }
+    static var notSupportedAlgorithm: Self { .init(code: .notSupportedAlgorithm) }
+    static var noRFC: Self { .init(code: .noRFC) }
+    static var noIssuerName: Self { .init(code: .noIssuerName) }
+    
+    var localizedDescription: String {
+        switch code {
+        case .certificateCreationFailed:
+            return "Certificate creation failed"
+        case .notSupportedAlgorithm:
+            return "Not supported algorithm"
+        case .noRFC:
+            return "No RFC"
+        case .noIssuerName:
+            return "No IssuerName"
+        }
+    }
 }
 
+/// Utility methods for your **e.firma**.
 public struct CertUtils {
     private var certificate: SecCertificate
     private var key: SecKey
     
+    /// Creates an utils instance with the provided **e.firma** data (Certificate, Private key).
+    ///
+    /// The certificate can be converter to the require file using the terminal with the following command
+    /// ```bash
+    /// openssl x509 -in /path/to/yourcertificate.cer -outformat DER -out certificate.key
+    /// ```
+    /// The private key can be converter to the require file using the terminal with the following command
+    ///
+    /// ```bash
+    ///  openssl rsa -in /path/to/yourprivatekey.key -outformat DER -out privkey.key -traditional
+    /// ```
+    ///
+    /// - Parameters:
+    ///   - certData: the certificate data of your **e.firma** in DER format.
+    ///   - keyData: the private key data of your **e.firma** in DER format without password.
+    /// - Throws: `certificateCreationFailed` error if the certificate is in the wrong format or an `errSecKey...` error from the [Security Framework Result Codes](https://developer.apple.com/documentation/security/security-framework-result-codes)  if the private key has an issue
     public init(certData: Data, keyData: Data) throws {
         guard let certificate = SecCertificateCreateWithData(nil, certData as CFData) else {
             throw CertUtilsError.certificateCreationFailed
@@ -73,6 +112,9 @@ public struct CertUtils {
         return "OID.\(oid)"
     }
     
+    /// Returns the issuer name of the certificate.
+    /// - Returns: the issuer name of the certificate.
+    /// - Throws: an  error from the [Security Framework Result Codes](https://developer.apple.com/documentation/security/security-framework-result-codes)  if the there is something wrong with the certificate
     public func getIssuerName() throws -> String {
         var error: Unmanaged<CFError>?
         guard let dict = SecCertificateCopyValues(certificate, [kSecOIDX509V1IssuerName] as CFArray, &error)
@@ -93,7 +135,10 @@ public struct CertUtils {
         }
         throw CertUtilsError.noIssuerName
     }
-
+    
+    /// Returns the hexString of the serial number of the certificate
+    /// - Returns: the hexString of the serial number of the certificate
+    /// - Throws: an  error from the [Security Framework Result Codes](https://developer.apple.com/documentation/security/security-framework-result-codes)  if the there is something wrong with the certificate
     public func getSerialNumber() throws -> String {
         var error: Unmanaged<CFError>?
 
@@ -104,8 +149,13 @@ public struct CertUtils {
 
         return serialNumber.hexString
     }
-
-    public func getRFC() throws -> String {
+    
+    /// Returns the subject name of the certificate
+    ///
+    /// For the **e.firma** the subject is the RFC
+    ///
+    /// - Returns: the subject name of the certificate
+    public func getSubjectName() throws -> String {
         var error: Unmanaged<CFError>?
         guard let dict = SecCertificateCopyValues(certificate, [kSecOIDX509V1SubjectName] as CFArray, &error)
         else {
@@ -124,8 +174,12 @@ public struct CertUtils {
 
         throw CertUtilsError.noRFC
     }
-
-    public func sign(with info: Data) throws -> Data {
+    
+    /// Creates the signature of the information using the private key
+    /// - Parameter info: the information that has to be signed with the private key
+    /// - Returns: the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) of the signature of the information using the private key
+    /// - Throws: an `notSupportedAlgorithm` error if the private key does not support RSA-SHA1 signature for messages
+    public func createSignature(for info: Data) throws -> String {
         let algorithm: SecKeyAlgorithm = .rsaSignatureMessagePKCS1v15SHA1
         guard SecKeyIsAlgorithmSupported(key, .sign, algorithm) else {
             throw CertUtilsError.notSupportedAlgorithm
@@ -140,15 +194,20 @@ public struct CertUtils {
         else {
             throw error!.takeRetainedValue() as Error
         }
-        return signature
+        return signature.base64EncodedString()
     }
-
-    public func getDigestValue(for node: Data) -> String {
-        let digest = Insecure.SHA1.hash(data: node)
+    
+    /// Returns the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) SHA1 hash of the data provided
+    /// - Parameter data: the data information that needs to be hashed
+    /// - Returns: the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) SHA1 hash of the data provided
+    public func getSHA1Hash(for data: Data) -> String {
+        let digest = Insecure.SHA1.hash(data: data)
         return Data(digest).base64EncodedString()
     }
-
-    public func getCert() -> String {
+    
+    /// Returns the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) of the certData
+    /// - Returns: the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) of the certData
+    public func getBase64StringCert() -> String {
         let certData = SecCertificateCopyData(certificate) as Data
         return certData.base64EncodedString()
     }

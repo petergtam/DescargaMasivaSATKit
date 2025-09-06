@@ -1,5 +1,5 @@
 //
-//  QueryResult.swift
+//  QueryEndpointResult.swift
 //  Fidadces
 //
 //  Created by Pedro Ivan Salas Peña on 06/05/24.
@@ -7,11 +7,27 @@
 
 import Foundation
 
-enum QueryResultError : Error {
-    case httpError(statusCode: Int?)
+struct QueryEndpointResultError : Error {
+    private enum Code {
+        case httpError(statusCode: Int?)
+    }
+    
+    private let code: Code
+    
+    static func httpError(statusCode: Int?) -> QueryEndpointResultError {
+        .init(code: .httpError(statusCode: statusCode))
+    }
+    
+    var localizedDescription: String {
+        switch code {
+        case .httpError(statusCode: let statusCode):
+            return "HTTP error: \(statusCode ?? 0)"
+        }
+    }
+    
 }
 
-class QueryResult : NSObject {
+class QueryEndpointResult : NSObject {
     
     var data: Data?
     var response: HTTPURLResponse?
@@ -43,11 +59,11 @@ class QueryResult : NSObject {
     
 }
 
-extension QueryResult: XMLParserDelegate {
+extension QueryEndpointResult: XMLParserDelegate {
     
     func parserDidEndDocument(_ parser: XMLParser) {
         if hasError {
-            completionHandler(nil, QueryResultError.httpError(statusCode: response?.statusCode))
+            completionHandler(nil, QueryEndpointResultError.httpError(statusCode: response?.statusCode))
         }else{
             completionHandler(result,nil)
         }
