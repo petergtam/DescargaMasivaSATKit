@@ -10,6 +10,7 @@ import Foundation
 struct QueryEndpointResultError : Error {
     private enum Code {
         case httpError(statusCode: Int?)
+        case serializationFailed
     }
     
     private let code: Code
@@ -18,10 +19,16 @@ struct QueryEndpointResultError : Error {
         .init(code: .httpError(statusCode: statusCode))
     }
     
+    static var serializationFailed: QueryEndpointResultError {
+        .init(code: .serializationFailed)
+    }
+
     var localizedDescription: String {
         switch code {
         case .httpError(statusCode: let statusCode):
             return "HTTP error: \(statusCode ?? 0)"
+        case .serializationFailed:
+            return "Serialization failed"
         }
     }
     
@@ -31,12 +38,12 @@ class QueryEndpointResult : NSObject {
     
     var data: Data?
     var response: HTTPURLResponse?
-    var completionHandler: ([String:String]?, Error?)->Void
+    var completionHandler: (String?, Error?)->Void
     
     private var hasError = false
     private var result: [String: String] = [:]
     
-    init(data: Data?, response: URLResponse?, completionHandler: @escaping ([String:String]?, Error?)->Void) {
+    init(data: Data?, response: URLResponse?, completionHandler: @escaping (String?, Error?)->Void) {
         self.data = data
         self.response = response as? HTTPURLResponse
         self.completionHandler = completionHandler
@@ -65,7 +72,22 @@ extension QueryEndpointResult: XMLParserDelegate {
         if hasError {
             completionHandler(nil, QueryEndpointResultError.httpError(statusCode: response?.statusCode))
         }else{
-            completionHandler(result,nil)
+            let cleanedResult = result.filter { !$0.key.starts(with: "xmlns") }
+            let encodedResult = cleanedResult.reduce([:]) { partialResult, element in
+                var partialResult = partialResult
+                if let intValue = Int(element.value) {
+                    partialResult[element.key] = intValue
+                }else {
+                    partialResult[element.key] = element.value
+                }
+                return partialResult
+            }
+            let response = ["result": encodedResult]
+            var jsonResult: String?
+            if let jsonData = try? JSONSerialization.data(withJSONObject: response, options: [.prettyPrinted,.sortedKeys]){
+                jsonResult = String(data: jsonData, encoding: .utf8)
+            }
+            completionHandler(jsonResult,nil)
         }
     }
     

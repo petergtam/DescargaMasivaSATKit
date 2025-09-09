@@ -28,6 +28,9 @@ struct QueryEndpointError: Error {
 
 
 /// An object to handle requests to the Query SOAP Endpoint of the API
+///
+/// - SeeAlso: [SAT Query Documentation](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/1_WS_Solicitud_Descarga_Masiva_V1_5_VF_89183c42e9.pdf)
+///
 public struct QueryEndpoint {
     private var params: InvoiceParams
     private var endPoint: String
@@ -101,9 +104,9 @@ public struct QueryEndpoint {
     }
     
     /// Requests the invoices for the given params
-    /// - Returns: a dictionary with the results of the request
+    /// - Returns: a json string representation of the result of the request
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``AuthenticationManager/add(certUtils:)`` or ``AuthenticationManager/add(certData:keyData:)`` has not been called yet.
-    public func request() async throws -> [String: String] {
+    public func request() async throws -> String {
         let tokenData = try await AuthenticationManager.shared.getToken(isRetention: params.isRetention)
         let body = try createSolicitaDescargaBody()
         guard let url = URL(string: "https://\(params.isRetention ? "reten": "cfdi")descargamasivasolicitud.clouda.sat.gob.mx/SolicitaDescargaService.svc") else {

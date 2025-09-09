@@ -30,13 +30,18 @@ final class QueryTest: XCTestCase {
     }
     
     func testRequest() async throws {
-            params.queryType = .metadata
-            params.receiptStatus = .vigente
-            params.operation = .recibidas
-            params.endPoint = .facturas
-            let request = QueryEndpoint(params: params)
-            let result = try await request.request()
-            XCTAssert(result.count > 0)
+        params.queryType = .metadata
+        params.receiptStatus = .vigente
+        params.operation = .recibidas
+        params.endPoint = .facturas
+        let request = QueryEndpoint(params: params)
+        let result = try await request.request()
+        if let data = result.data(using: .utf8) {
+            let obj = try JSONDecoder().decode(QueryResponse.self, from: data)
+            XCTAssertNotNil(obj.result)
+            XCTAssertEqual(obj.result.CodEstatus, 305)
+            XCTAssertEqual(obj.result.Mensaje, "Certificado Inválido")
+        }
     }
 
 }

@@ -15,7 +15,7 @@ extension Date {
     }
 }
 
-/// An object to handle tokens
+/// A type with the token information
 public struct TokenData: Sendable, Equatable {
     var created: Date
     var expires: Date

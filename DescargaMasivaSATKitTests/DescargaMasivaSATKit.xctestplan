@@ -13,10 +13,6 @@
   },
   "testTargets" : [
     {
-      "skippedTests" : [
-        "Authentication\/testRefreshCFDIToken()",
-        "Authentication\/testRefreshRetentionToken()"
-      ],
       "target" : {
         "containerPath" : "container:DescargaMasivaSATKit.xcodeproj",
         "identifier" : "EC26D2322E68A34E00E71C6B",

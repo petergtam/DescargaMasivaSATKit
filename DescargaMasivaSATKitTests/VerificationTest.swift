@@ -25,10 +25,12 @@ final class VerificationTest: XCTestCase {
     
     func testRequest() async throws {
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
-        let (result, contents) = try await verification.request()
-        XCTAssert(result.count > 0)
-        if let contents {
-            XCTAssert(contents.count > 0)
+        let result = try await verification.request()
+        if let data = result.data(using: .utf8) {
+            let obj = try JSONDecoder().decode(VerificationResponse.self, from: data)
+            XCTAssertNotNil(obj.result)
+            XCTAssertEqual(obj.result.CodEstatus, 305)
+            XCTAssertEqual(obj.result.Mensaje, "Certificado Inválido")
         }
     }
 

@@ -110,11 +110,11 @@ public struct InvoiceParams {
         let today = Date()
         startDate = today
         endDate = today
-        if let final = calendar.date(byAdding: .month, value: -1, to: today){
-            startDate = final
-        }
         if let initial = calendar.date(byAdding: .month, value: -1, to: today){
-            endDate = initial
+            startDate = initial
+        }
+        if let final = calendar.date(byAdding: .day, value: -1, to: today){
+            endDate = final
         }
     }
 

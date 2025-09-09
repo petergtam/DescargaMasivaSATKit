@@ -10,6 +10,7 @@ import Foundation
 struct VerificationEndpointResultError: Error {
     private enum Code {
         case httpError(statusCode: Int?)
+        case serializationFailed
     }
     
     private let code: Code
@@ -18,10 +19,16 @@ struct VerificationEndpointResultError: Error {
         .init(code: .httpError(statusCode: statusCode))
     }
     
+    static var serializationFailed: VerificationEndpointResultError {
+        .init(code: .serializationFailed)
+    }
+
     var localizedDescription: String {
         switch code {
         case .httpError(statusCode: let statusCode):
             return "HTTP error: \(statusCode ?? 0)"
+        case .serializationFailed:
+            return "Serialization failed"
         }
     }
 }
@@ -30,7 +37,7 @@ class VerificationEndpointResult: NSObject {
 
     var data: Data?
     var response: HTTPURLResponse?
-    var completionHandler: ([String: String]?, [String]?, Error?) -> Void
+    var completionHandler: (String?, Error?) -> Void
 
     private var hasError = false
     private var result: [String: String] = [:]
@@ -38,7 +45,7 @@ class VerificationEndpointResult: NSObject {
 
     init(
         data: Data?, response: URLResponse?,
-        completionHandler: @escaping ([String: String]?, [String]?, Error?) -> Void
+        completionHandler: @escaping (String?, Error?) -> Void
     ) {
         self.data = data
         self.response = response as? HTTPURLResponse
@@ -66,13 +73,27 @@ extension VerificationEndpointResult: XMLParserDelegate {
 
     func parserDidEndDocument(_ parser: XMLParser) {
         if hasError {
-            completionHandler(nil, nil, VerificationEndpointResultError.httpError(statusCode: response?.statusCode))
+            completionHandler(nil, VerificationEndpointResultError.httpError(statusCode: response?.statusCode))
         } else {
-            if contents.count > 0 {
-                completionHandler(result, contents,nil)
-            } else {
-                completionHandler(result, nil,nil)
+            let cleanedResult = result.filter { !$0.key.starts(with: "xmlns") }
+            let encodedResult = cleanedResult.reduce([:]) { partialResult, element in
+                var partialResult = partialResult
+                if let intValue = Int(element.value) {
+                    partialResult[element.key] = intValue
+                }else {
+                    partialResult[element.key] = element.value
+                }
+                return partialResult
             }
+            var response: [String: Any] = ["result": encodedResult]
+            if contents.count > 0 {
+                response["contents"] = contents
+            }
+            var jsonResult: String?
+            if let jsonData = try? JSONSerialization.data(withJSONObject: response, options: [.prettyPrinted,.sortedKeys]){
+                jsonResult = String(data: jsonData, encoding: .utf8)
+            }
+            completionHandler(jsonResult, nil)
         }
     }
 

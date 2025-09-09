@@ -27,6 +27,9 @@ struct VerificationEndpointError: Error {
 }
 
 /// An object to handle requests to the Verification SOAP Endpoint of the API
+///
+/// - SeeAlso: [SAT Verification Documentation](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/2_WS_Verificacion_de_Descarga_Masiva_V1_5_VF_5e53cc2bb5.pdf)
+///
 public struct VerificationEndpoint {
     private var queryId: String
     private var isRetention: Bool
@@ -73,9 +76,9 @@ public struct VerificationEndpoint {
     }
     
     /// Requests the verification of the given query id
-    /// - Returns: a bi-tuple with the result of the call and the contents of the package if the result is successful.
+    /// - Returns: a json string representation of the result of the verification and the contents of the packages to download if the verification is successful
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``AuthenticationManager/add(certUtils:)`` or ``AuthenticationManager/add(certData:keyData:)`` has not been called yet.
-    public func request() async throws -> ([String: String], [String]?) {
+    public func request() async throws -> String {
         let tokenData = try await AuthenticationManager.shared.getToken(isRetention: isRetention)
         let body = try createVerificaSolicitudDescargaBody()
         
@@ -93,17 +96,13 @@ public struct VerificationEndpoint {
         let (data, response) =  try await URLSession.shared.data(for: request)
         
         return await withCheckedContinuation { continuation in
-            let verResult = VerificationEndpointResult(data: data, response: response){ result, contents, error in
+            let verResult = VerificationEndpointResult(data: data, response: response){ result, error in
                 if let error {
                     continuation.resume(throwing: error as! Never)
                     return
                 }
                 if let result {
-                    if let contents {
-                        continuation.resume(returning: (result, contents))
-                    }else {
-                        continuation.resume(returning: (result,nil))
-                    }
+                    continuation.resume(returning: result)
                 }
             }
             verResult.parse()

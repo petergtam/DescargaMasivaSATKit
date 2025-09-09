@@ -26,6 +26,9 @@ struct DownloadEndpointError: Error {
 }
 
 /// An object to handle requests to the Download SOAP Endpoint of the API
+///
+/// - SeeAlso: [SAT Download Documentation](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/3_WS_Descarga_de_Solicitudes_Exitosas_V1_5_VF_74f66e46ec.pdf)
+///
 public struct DownloadEndpoint {
     private var packageId: String
     private var isRetention: Bool
@@ -73,9 +76,9 @@ public struct DownloadEndpoint {
     
     
     /// Requests the content of the package to download
-    /// - Returns: a bi-tuple with the result of the call and the contents of the package if the result is successful.
+    /// - Returns: a json string representation of the result and the contents of the package to download
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``AuthenticationManager/add(certUtils:)`` or ``AuthenticationManager/add(certData:keyData:)`` has not been called yet.
-    public func request() async throws -> ([String: String],[String]?) {
+    public func request() async throws -> String {
         let tokenData = try await AuthenticationManager.shared.getToken(isRetention: isRetention)
         
         let body = try createDescargaBody()
@@ -94,17 +97,12 @@ public struct DownloadEndpoint {
         let (data, response) = try await URLSession.shared.data(for: request)
         
         return await withCheckedContinuation { continuation in
-            let downResult = DownloadEndpointResult(data: data, response: response){ result, contents, error in
+            let downResult = DownloadEndpointResult(data: data, response: response){ result, error in
                 if let error {
                     continuation.resume(throwing: error as! Never)
-                    return
                 }
                 if let result {
-                    if let contents {
-                        continuation.resume(returning: (result, contents))
-                    }else {
-                        continuation.resume(returning: (result, nil))
-                    }
+                    continuation.resume(returning: result)
                 }
             }
             downResult.parse()

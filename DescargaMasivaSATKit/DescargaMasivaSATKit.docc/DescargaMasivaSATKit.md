@@ -21,6 +21,8 @@ The second feature is a collection of objects that allows you to use each part o
 - The verification request
 - The download request
 
+- Note: This framework is intended for developers working for customers in México
+
 - SeeAlso: Take a look at each of the documents from the SAT
     - [Service URLs](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/0_UR_Ls_WS_Descarga_Masiva_V1_5_VF_33e2cca681.pdf)
     - [Query Documentation](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/1_WS_Solicitud_Descarga_Masiva_V1_5_VF_89183c42e9.pdf)
