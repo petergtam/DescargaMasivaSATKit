@@ -135,7 +135,6 @@ iOSInjectionProject/
 
 archives
 derivedData
-xcframeworks
 createRelease
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,macos,swift,swiftpm,swiftpackagemanager

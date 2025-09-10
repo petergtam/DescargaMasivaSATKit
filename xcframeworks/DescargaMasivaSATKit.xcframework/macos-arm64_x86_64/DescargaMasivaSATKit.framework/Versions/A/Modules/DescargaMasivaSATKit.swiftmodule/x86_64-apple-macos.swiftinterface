@@ -1,0 +1,209 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-macos12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DescargaMasivaSATKit
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import CryptoKit
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct QueryResponse : Swift.Codable {
+  public var result: DescargaMasivaSATKit.QueryResult
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct QueryResult : Swift.Codable {
+  public var CodEstatus: Swift.Int
+  public var IdSolicitud: Swift.String?
+  public var Mensaje: Swift.String
+  public var RfcSolicitante: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum QueryType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+  case metadata
+  case cfdi
+  case pdf
+  case pdfcocema
+  case txt
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DescargaMasivaSATKit.QueryType]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DescargaMasivaSATKit.QueryType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ReceiptType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+  case ingreso
+  case egreso
+  case traslado
+  case nomina
+  case pago
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DescargaMasivaSATKit.ReceiptType]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DescargaMasivaSATKit.ReceiptType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ReceiptStatus : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+  case todos
+  case cancelado
+  case vigente
+  public var name: Swift.String {
+    get
+  }
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DescargaMasivaSATKit.ReceiptStatus]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DescargaMasivaSATKit.ReceiptStatus] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OperationType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+  case emitidas
+  case recibidas
+  public var name: Swift.String {
+    get
+  }
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DescargaMasivaSATKit.OperationType]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DescargaMasivaSATKit.OperationType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EndPoint : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+  case facturas
+  case retenciones
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DescargaMasivaSATKit.EndPoint]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DescargaMasivaSATKit.EndPoint] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct InvoiceParams {
+  public var operation: DescargaMasivaSATKit.OperationType
+  public var startDate: Foundation.Date
+  public var endDate: Foundation.Date
+  public var queryType: DescargaMasivaSATKit.QueryType
+  public var receiptType: DescargaMasivaSATKit.ReceiptType?
+  public var receiptStatus: DescargaMasivaSATKit.ReceiptStatus
+  public var invoiceId: Swift.String
+  public var endPoint: DescargaMasivaSATKit.EndPoint
+  public var isRetention: Swift.Bool {
+    get
+  }
+  public init()
+}
+public struct VerificationResponse : Swift.Codable {
+  public var result: DescargaMasivaSATKit.VerificationResult
+  public var contents: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VerificationResult : Swift.Codable {
+  public var CodEstatus: Swift.Int
+  public var CodigoEstadoSolicitud: Swift.Int?
+  public var EstadoSolicitud: Swift.Int
+  public var IdsPaquetes: [Swift.String]?
+  public var Mensaje: Swift.String
+  public var NumeroCFDIs: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TokenData : Swift.Sendable, Swift.Equatable {
+  public static func == (a: DescargaMasivaSATKit.TokenData, b: DescargaMasivaSATKit.TokenData) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class AuthenticationManager {
+  public static let shared: DescargaMasivaSATKit.AuthenticationManager
+  public func add(certData: Foundation.Data, keyData: Foundation.Data) throws
+  public func add(certUtils: DescargaMasivaSATKit.CertUtils)
+  public func getToken(isRetention: Swift.Bool = false) async throws -> DescargaMasivaSATKit.TokenData
+  @objc deinit
+}
+public struct CertUtils {
+  public init(certData: Foundation.Data, keyData: Foundation.Data) throws
+  public func getIssuerName() throws -> Swift.String
+  public func getSerialNumber() throws -> Swift.String
+  public func getSubjectName() throws -> Swift.String
+  public func createSignature(for info: Foundation.Data) throws -> Swift.String
+  public func getSHA1Hash(for data: Foundation.Data) -> Swift.String
+  public func getBase64StringCert() -> Swift.String
+}
+public struct VerificationEndpoint {
+  public init(queryId: Swift.String, isRetention: Swift.Bool = false)
+  public func request() async throws -> Swift.String
+}
+public struct DownloadEndpoint {
+  public init(packageId: Swift.String, isRetention: Swift.Bool = false)
+  public func request() async throws -> Swift.String
+}
+public struct DownloadResponse : Swift.Codable {
+  public var result: DescargaMasivaSATKit.DownloadResult
+  public var contents: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DownloadResult : Swift.Codable {
+  public var CodEstatus: Swift.Int
+  public var Mensaje: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct QueryEndpoint {
+  public init(params: DescargaMasivaSATKit.InvoiceParams)
+  public func request() async throws -> Swift.String
+}
+extension DescargaMasivaSATKit.QueryType : Swift.Equatable {}
+extension DescargaMasivaSATKit.QueryType : Swift.Hashable {}
+extension DescargaMasivaSATKit.QueryType : Swift.RawRepresentable {}
+extension DescargaMasivaSATKit.ReceiptType : Swift.Equatable {}
+extension DescargaMasivaSATKit.ReceiptType : Swift.Hashable {}
+extension DescargaMasivaSATKit.ReceiptType : Swift.RawRepresentable {}
+extension DescargaMasivaSATKit.ReceiptStatus : Swift.Equatable {}
+extension DescargaMasivaSATKit.ReceiptStatus : Swift.Hashable {}
+extension DescargaMasivaSATKit.ReceiptStatus : Swift.RawRepresentable {}
+extension DescargaMasivaSATKit.OperationType : Swift.Equatable {}
+extension DescargaMasivaSATKit.OperationType : Swift.Hashable {}
+extension DescargaMasivaSATKit.OperationType : Swift.RawRepresentable {}
+extension DescargaMasivaSATKit.EndPoint : Swift.Equatable {}
+extension DescargaMasivaSATKit.EndPoint : Swift.Hashable {}
+extension DescargaMasivaSATKit.EndPoint : Swift.RawRepresentable {}
