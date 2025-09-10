@@ -692,6 +692,1379 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "VerificationEndpoint",
+        "printedName": "VerificationEndpoint",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(queryId:isRetention:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerificationEndpoint",
+                "printedName": "DescargaMasivaSATKit.VerificationEndpoint",
+                "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV7queryId11isRetentionACSS_Sbtcfc",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV7queryId11isRetentionACSS_Sbtcfc",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "request",
+            "printedName": "request()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV7requestSSyYaKF",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV7requestSSyYaKF",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV",
+        "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VerificationResponse",
+        "printedName": "VerificationResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "result",
+            "printedName": "result",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerificationResult",
+                "printedName": "DescargaMasivaSATKit.VerificationResult",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvp",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerificationResult",
+                    "printedName": "DescargaMasivaSATKit.VerificationResult",
+                    "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvg",
+                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerificationResult",
+                    "printedName": "DescargaMasivaSATKit.VerificationResult",
+                    "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvs",
+                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvM",
+                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "contents",
+            "printedName": "contents",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvp",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvg",
+                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvs",
+                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvM",
+                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerificationResponse",
+                "printedName": "DescargaMasivaSATKit.VerificationResponse",
+                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "DescargaMasivaSATKit",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "DescargaMasivaSATKit",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20DescargaMasivaSATKit20VerificationResponseV",
+        "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VerificationResult",
+        "printedName": "VerificationResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "CodEstatus",
+            "printedName": "CodEstatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivp",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivg",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivs",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivM",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "CodigoEstadoSolicitud",
+            "printedName": "CodigoEstadoSolicitud",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvp",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvg",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvs",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvM",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "EstadoSolicitud",
+            "printedName": "EstadoSolicitud",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivp",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivg",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivs",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivM",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "IdsPaquetes",
+            "printedName": "IdsPaquetes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvp",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvg",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvs",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvM",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "Mensaje",
+            "printedName": "Mensaje",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvp",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvg",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvs",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvM",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "NumeroCFDIs",
+            "printedName": "NumeroCFDIs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivp",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivp",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivg",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivg",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivs",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivs",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivM",
+                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivM",
+                "moduleName": "DescargaMasivaSATKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerificationResult",
+                "printedName": "DescargaMasivaSATKit.VerificationResult",
+                "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "DescargaMasivaSATKit",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit18VerificationResultV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV6encode2toys7Encoder_p_tKF",
+            "moduleName": "DescargaMasivaSATKit",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20DescargaMasivaSATKit18VerificationResultV",
+        "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DescargaMasivaSATKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TokenData",
+        "printedName": "TokenData",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TokenData",
+                "printedName": "DescargaMasivaSATKit.TokenData",
+                "usr": "s:20DescargaMasivaSATKit9TokenDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TokenData",
+                "printedName": "DescargaMasivaSATKit.TokenData",
+                "usr": "s:20DescargaMasivaSATKit9TokenDataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit9TokenDataV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20DescargaMasivaSATKit9TokenDataV2eeoiySbAC_ACtFZ",
+            "moduleName": "DescargaMasivaSATKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20DescargaMasivaSATKit9TokenDataV",
+        "mangledName": "$s20DescargaMasivaSATKit9TokenDataV",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthenticationManager",
+        "printedName": "AuthenticationManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationManager",
+                "printedName": "DescargaMasivaSATKit.AuthenticationManager",
+                "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvpZ",
+            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvpZ",
+            "moduleName": "DescargaMasivaSATKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthenticationManager",
+                    "printedName": "DescargaMasivaSATKit.AuthenticationManager",
+                    "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvgZ",
+                "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvgZ",
+                "moduleName": "DescargaMasivaSATKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(certData:keyData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC3add8certData03keyH0y10Foundation0H0V_AItKF",
+            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC3add8certData03keyH0y10Foundation0H0V_AItKF",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(certUtils:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CertUtils",
+                "printedName": "DescargaMasivaSATKit.CertUtils",
+                "usr": "s:20DescargaMasivaSATKit9CertUtilsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC3add9certUtilsyAA04CertH0V_tF",
+            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC3add9certUtilsyAA04CertH0V_tF",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getToken",
+            "printedName": "getToken(isRetention:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TokenData",
+                "printedName": "DescargaMasivaSATKit.TokenData",
+                "usr": "s:20DescargaMasivaSATKit9TokenDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC8getToken11isRetentionAA0G4DataVSb_tYaKF",
+            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC8getToken11isRetentionAA0G4DataVSb_tYaKF",
+            "moduleName": "DescargaMasivaSATKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC",
+        "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -3692,1290 +5065,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "VerificationResponse",
-        "printedName": "VerificationResponse",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "result",
-            "printedName": "result",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VerificationResult",
-                "printedName": "DescargaMasivaSATKit.VerificationResult",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvp",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VerificationResult",
-                    "printedName": "DescargaMasivaSATKit.VerificationResult",
-                    "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvg",
-                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VerificationResult",
-                    "printedName": "DescargaMasivaSATKit.VerificationResult",
-                    "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvs",
-                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvM",
-                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6resultAA0D6ResultVvM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "contents",
-            "printedName": "contents",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvp",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvg",
-                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvs",
-                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvM",
-                "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV8contentsSaySSGSgvM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VerificationResponse",
-                "printedName": "DescargaMasivaSATKit.VerificationResponse",
-                "usr": "s:20DescargaMasivaSATKit20VerificationResponseV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "DescargaMasivaSATKit",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit20VerificationResponseV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV6encode2toys7Encoder_p_tKF",
-            "moduleName": "DescargaMasivaSATKit",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:20DescargaMasivaSATKit20VerificationResponseV",
-        "mangledName": "$s20DescargaMasivaSATKit20VerificationResponseV",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VerificationResult",
-        "printedName": "VerificationResult",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "CodEstatus",
-            "printedName": "CodEstatus",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivp",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivg",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivs",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivM",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV10CodEstatusSivM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "CodigoEstadoSolicitud",
-            "printedName": "CodigoEstadoSolicitud",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvp",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Int?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvg",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Int?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvs",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvM",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV21CodigoEstadoSolicitudSiSgvM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "EstadoSolicitud",
-            "printedName": "EstadoSolicitud",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivp",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivg",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivs",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivM",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV15EstadoSolicitudSivM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "IdsPaquetes",
-            "printedName": "IdsPaquetes",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvp",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvg",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvs",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvM",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11IdsPaquetesSaySSGSgvM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "Mensaje",
-            "printedName": "Mensaje",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvp",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvg",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvs",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV7MensajeSSvM",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV7MensajeSSvM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "NumeroCFDIs",
-            "printedName": "NumeroCFDIs",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivp",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivp",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivg",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivg",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivs",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivs",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivM",
-                "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV11NumeroCFDIsSivM",
-                "moduleName": "DescargaMasivaSATKit",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VerificationResult",
-                "printedName": "DescargaMasivaSATKit.VerificationResult",
-                "usr": "s:20DescargaMasivaSATKit18VerificationResultV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "DescargaMasivaSATKit",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit18VerificationResultV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV6encode2toys7Encoder_p_tKF",
-            "moduleName": "DescargaMasivaSATKit",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:20DescargaMasivaSATKit18VerificationResultV",
-        "mangledName": "$s20DescargaMasivaSATKit18VerificationResultV",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CryptoKit",
-        "printedName": "CryptoKit",
-        "declKind": "Import",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "DescargaMasivaSATKit"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TokenData",
-        "printedName": "TokenData",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TokenData",
-                "printedName": "DescargaMasivaSATKit.TokenData",
-                "usr": "s:20DescargaMasivaSATKit9TokenDataV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TokenData",
-                "printedName": "DescargaMasivaSATKit.TokenData",
-                "usr": "s:20DescargaMasivaSATKit9TokenDataV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit9TokenDataV2eeoiySbAC_ACtFZ",
-            "mangledName": "$s20DescargaMasivaSATKit9TokenDataV2eeoiySbAC_ACtFZ",
-            "moduleName": "DescargaMasivaSATKit",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:20DescargaMasivaSATKit9TokenDataV",
-        "mangledName": "$s20DescargaMasivaSATKit9TokenDataV",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "AuthenticationManager",
-        "printedName": "AuthenticationManager",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AuthenticationManager",
-                "printedName": "DescargaMasivaSATKit.AuthenticationManager",
-                "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvpZ",
-            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvpZ",
-            "moduleName": "DescargaMasivaSATKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AuthenticationManager",
-                    "printedName": "DescargaMasivaSATKit.AuthenticationManager",
-                    "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvgZ",
-                "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC6sharedACvgZ",
-                "moduleName": "DescargaMasivaSATKit",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "add",
-            "printedName": "add(certData:keyData:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Data",
-                "printedName": "Foundation.Data",
-                "usr": "s:10Foundation4DataV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Data",
-                "printedName": "Foundation.Data",
-                "usr": "s:10Foundation4DataV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC3add8certData03keyH0y10Foundation0H0V_AItKF",
-            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC3add8certData03keyH0y10Foundation0H0V_AItKF",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "add",
-            "printedName": "add(certUtils:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CertUtils",
-                "printedName": "DescargaMasivaSATKit.CertUtils",
-                "usr": "s:20DescargaMasivaSATKit9CertUtilsV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC3add9certUtilsyAA04CertH0V_tF",
-            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC3add9certUtilsyAA04CertH0V_tF",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getToken",
-            "printedName": "getToken(isRetention:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TokenData",
-                "printedName": "DescargaMasivaSATKit.TokenData",
-                "usr": "s:20DescargaMasivaSATKit9TokenDataV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC8getToken11isRetentionAA0G4DataVSb_tYaKF",
-            "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC8getToken11isRetentionAA0G4DataVSb_tYaKF",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:20DescargaMasivaSATKit21AuthenticationManagerC",
-        "mangledName": "$s20DescargaMasivaSATKit21AuthenticationManagerC",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "CryptoKit",
         "printedName": "CryptoKit",
@@ -5184,105 +5273,6 @@
         "declKind": "Struct",
         "usr": "s:20DescargaMasivaSATKit9CertUtilsV",
         "mangledName": "$s20DescargaMasivaSATKit9CertUtilsV",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "DescargaMasivaSATKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VerificationEndpoint",
-        "printedName": "VerificationEndpoint",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(queryId:isRetention:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VerificationEndpoint",
-                "printedName": "DescargaMasivaSATKit.VerificationEndpoint",
-                "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV7queryId11isRetentionACSS_Sbtcfc",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV7queryId11isRetentionACSS_Sbtcfc",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "request",
-            "printedName": "request()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV7requestSSyYaKF",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV7requestSSyYaKF",
-            "moduleName": "DescargaMasivaSATKit",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV",
-        "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV",
         "moduleName": "DescargaMasivaSATKit",
         "declAttributes": [
           "AccessControl",
@@ -6096,31 +6086,76 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DescargaMasivaSATKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpoint.swift",
       "kind": "BooleanLiteral",
-      "offset": 1008,
+      "offset": 1192,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1030,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 1057,
+      "offset": 1079,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
+      "kind": "Array",
+      "offset": 1120,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 2936,
+      "offset": 3152,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "kind": "Dictionary",
+      "offset": 1501,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3207,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7697,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
@@ -6200,55 +6235,6 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
-      "kind": "Dictionary",
-      "offset": 1501,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3207,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7697,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1030,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
-      "kind": "Dictionary",
-      "offset": 1079,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
-      "kind": "Array",
-      "offset": 1120,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
-      "kind": "Dictionary",
-      "offset": 3152,
-      "length": 3,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationResult.swift",
       "kind": "Array",
       "offset": 1250,
@@ -6259,13 +6245,6 @@
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationResult.swift",
       "kind": "BooleanLiteral",
       "offset": 1280,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpoint.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1192,
       "length": 5,
       "value": "false"
     },
@@ -6301,6 +6280,27 @@
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/DownloadEndpoint\/DownloadEndpointResult.swift",
       "kind": "Dictionary",
       "offset": 3125,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1008,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
+      "kind": "Dictionary",
+      "offset": 1057,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
+      "kind": "Dictionary",
+      "offset": 2936,
       "length": 3,
       "value": "[]"
     }
