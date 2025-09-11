@@ -11,7 +11,7 @@ final class Authentication: XCTestCase {
         if let certUrl = Bundle(for: Authentication.self).url(forResource: "certificate", withExtension: ".cer"), let keyUrl = Bundle(for: Authentication.self).url(forResource: "privkey", withExtension: ".key") {
             let certData = try Data(contentsOf: certUrl)
             let keyData = try Data(contentsOf: keyUrl)
-            try AuthenticationManager.shared.add(certData: certData, keyData: keyData)
+            XCTAssertNoThrow(try AuthenticationManager.shared.add(certData: certData, keyData: keyData))
         }
     }
     
