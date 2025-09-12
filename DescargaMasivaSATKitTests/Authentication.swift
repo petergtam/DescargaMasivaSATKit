@@ -9,13 +9,12 @@ struct StubAuthenticationSharedSession: SharedSession {
         case cfdiRefresh
         case retenRefresh
     }
-
+    
     let xmlResponses: [Statuses: String] = [
         .cfdi: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"><u:Created>2025-09-12T03:55:32.573Z</u:Created><u:Expires>2025-09-12T04:00:32.573Z</u:Expires></u:Timestamp></o:Security></s:Header><s:Body><AutenticaResponse xmlns="http://DescargaMasivaTerceros.gob.mx"><AutenticaResult>eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTc2NDkzMzIsImV4cCI6MTc1NzY0OTkzMiwiaWF0IjoxNzU3NjQ5MzMyLCJpc3MiOiJMb2FkU29saWNpdHVkRGVjYXJnYU1hc2l2YVRlcmNlcm9zIiwiYWN0b3J0IjoiMzMzMDMwMzAzMTMwMzAzMDMwMzAzMDM1MzAzMDMwMzAzMzMyMzkzOSJ9.G1PfX5Tgy1Ie1GPFswNKCFkPz9VNh31AEmr_qzzXzC4%26wrap_subject%3d3330303031303030303030353030303033323939</AutenticaResult></AutenticaResponse></s:Body></s:Envelope>"#,
         .cfdiRefresh: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"><u:Created>2025-09-12T04:00:32.861Z</u:Created><u:Expires>2025-09-12T04:05:32.861Z</u:Expires></u:Timestamp></o:Security></s:Header><s:Body><AutenticaResponse xmlns="http://DescargaMasivaTerceros.gob.mx"><AutenticaResult>eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTc2NDk2MzIsImV4cCI6MTc1NzY1MDIzMiwiaWF0IjoxNzU3NjQ5NjMyLCJpc3MiOiJMb2FkU29saWNpdHVkRGVjYXJnYU1hc2l2YVRlcmNlcm9zIiwiYWN0b3J0IjoiMzMzMDMwMzAzMTMwMzAzMDMwMzAzMDM1MzAzMDMwMzAzMzMyMzkzOSJ9.N94FFMZAoNXNg1kKLC-aClsNUzP68NpPQfXJWi3E4Gs%26wrap_subject%3d3330303031303030303030353030303033323939</AutenticaResult></AutenticaResponse></s:Body></s:Envelope>"#,
         .reten: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"><u:Created>2025-09-12T05:26:33.285Z</u:Created><u:Expires>2025-09-12T05:31:33.285Z</u:Expires></u:Timestamp></o:Security></s:Header><s:Body><AutenticaResponse xmlns="http://DescargaMasivaTerceros.gob.mx"><AutenticaResult>eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTc2NTQ3OTMsImV4cCI6MTc1NzY1NTM5MywiaWF0IjoxNzU3NjU0NzkzLCJpc3MiOiJMb2FkU2VydmljaW9EZWNhcmdhTWFzaXZhVGVyY2Vyb3NSZXQiLCJhY3RvcnQiOiIzMzMwMzAzMDMxMzAzMDMwMzAzMDMwMzUzMDMwMzAzMDMzMzIzOTM5In0.mezXGqesyzTSYcBlMmVnPfoRfygtB1zj7d80zJMUXqc%26wrap_subject%3d3330303031303030303030353030303033323939</AutenticaResult></AutenticaResponse></s:Body></s:Envelope>"#,
         .retenRefresh: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"><u:Created>2025-09-12T05:31:43.677Z</u:Created><u:Expires>2025-09-12T05:36:43.677Z</u:Expires></u:Timestamp></o:Security></s:Header><s:Body><AutenticaResponse xmlns="http://DescargaMasivaTerceros.gob.mx"><AutenticaResult>eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTc2NTUxMDMsImV4cCI6MTc1NzY1NTcwMywiaWF0IjoxNzU3NjU1MTAzLCJpc3MiOiJMb2FkU2VydmljaW9EZWNhcmdhTWFzaXZhVGVyY2Vyb3NSZXQiLCJhY3RvcnQiOiIzMzMwMzAzMDMxMzAzMDMwMzAzMDMwMzUzMDMwMzAzMDMzMzIzOTM5In0.wTorH3fJ5s1_EsOXWIZv8QKb3ZfHfZScrKRDnFOTIwc%26wrap_subject%3d3330303031303030303030353030303033323939</AutenticaResult></AutenticaResponse></s:Body></s:Envelope>"#
-        
     ]
     
     var response: Statuses = .cfdi
@@ -136,5 +135,11 @@ final class Authentication: XCTestCase {
         let secondToken = try await AuthenticationManager.shared.getToken(sharedSession, sharedSession.now, isRetention: true)
         XCTAssertNotEqual(firstToken, secondToken)
     }
-
+    
+    func test404Request() async throws {
+        sharedSession.statusCode = 404
+        try loadCertificates()
+        await XCTAssertThrowsErrorAsync(try await AuthenticationManager.shared.getToken(sharedSession), AuthenticationResultError.httpError(statusCode: 404, contents: ["2025-09-12T03:55:32.573Z","2025-09-12T04:00:32.573Z","eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTc2NDkzMzIsImV4cCI6MTc1NzY0OTkzMiwiaWF0IjoxNzU3NjQ5MzMyLCJpc3MiOiJMb2FkU29saWNpdHVkRGVjYXJnYU1hc2l2YVRlcmNlcm9zIiwiYWN0b3J0IjoiMzMzMDMwMzAzMTMwMzAzMDMwMzAzMDM1MzAzMDMwMzAzMzMyMzkzOSJ9.G1PfX5Tgy1Ie1GPFswNKCFkPz9VNh31AEmr_qzzXzC4%26wrap_subject%3d3330303031303030303030353030303033323939"]))
+    }
+    
 }

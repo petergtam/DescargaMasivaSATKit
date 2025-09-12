@@ -15,7 +15,7 @@ class StubDownloadSharedSession: SharedSession {
         case completed
         case maxPermittedSize
     }
-
+    
     let xmlResponses: [Statuses: String] = [
         .invalidCert: "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Header><h:respuesta CodEstatus=\"305\" Mensaje=\"Certificado Inválido\" xmlns:h=\"http://DescargaMasivaTerceros.sat.gob.mx\" xmlns=\"http://DescargaMasivaTerceros.sat.gob.mx\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"/></s:Header><s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><RespuestaDescargaMasivaTercerosSalida xmlns=\"http://DescargaMasivaTerceros.sat.gob.mx\"><Paquete/></RespuestaDescargaMasivaTercerosSalida></s:Body></s:Envelope>",
         .packageNotFound: "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Header><h:respuesta CodEstatus=\"5004\" Mensaje=\"No se encontro la informacion\" xmlns:h=\"http://DescargaMasivaTerceros.sat.gob.mx\" xmlns=\"http://DescargaMasivaTerceros.sat.gob.mx\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"/></s:Header><s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><RespuestaDescargaMasivaTercerosSalida xmlns=\"http://DescargaMasivaTerceros.sat.gob.mx\"><Paquete/></RespuestaDescargaMasivaTercerosSalida></s:Body></s:Envelope>",
@@ -36,7 +36,7 @@ class StubDownloadSharedSession: SharedSession {
 final class DownloadTest: XCTestCase {
     
     let sharedSession = StubDownloadSharedSession()
-
+    
     override func setUpWithError() throws {
         if let certUrl = Bundle(for: DownloadTest.self).url(forResource: "certificate", withExtension: "cer"), let keyURL = Bundle(for: DownloadTest.self).url(forResource: "privkey", withExtension: "key") {
             let certData = try Data(contentsOf: certUrl)
@@ -117,5 +117,5 @@ final class DownloadTest: XCTestCase {
         let download = DownloadEndpoint(packageId: "E7092BEB-1EAC-4C32-B4FE-DDA5FE95A712_01")
         await XCTAssertThrowsErrorAsync(try await download.request(sharedSession), DownloadEndpointResultError.httpError(statusCode: 404)) 
     }
-
+    
 }

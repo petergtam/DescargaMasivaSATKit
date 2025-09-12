@@ -22,7 +22,7 @@ struct QueryEndpointResultError : Error, Equatable {
     static var serializationFailed: QueryEndpointResultError {
         .init(code: .serializationFailed)
     }
-
+    
     var localizedDescription: String {
         switch code {
         case .httpError(statusCode: let statusCode):

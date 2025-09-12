@@ -21,14 +21,14 @@ struct CertUtilsError: Error {
         case noRFC
         case noIssuerName
     }
-    
+
     private let code: Code
-    
+
     static var certificateCreationFailed: Self { .init(code: .certificateCreationFailed) }
     static var notSupportedAlgorithm: Self { .init(code: .notSupportedAlgorithm) }
     static var noRFC: Self { .init(code: .noRFC) }
     static var noIssuerName: Self { .init(code: .noIssuerName) }
-    
+
     var localizedDescription: String {
         switch code {
         case .certificateCreationFailed:
@@ -47,7 +47,7 @@ struct CertUtilsError: Error {
 public struct CertUtils {
     private var certificate: SecCertificate
     private var key: SecKey
-    
+
     /// Creates an utils instance with the provided **e.firma** data (Certificate, Private key).
     ///
     /// The certificate can be converter to the require file using the terminal with the following command
@@ -111,7 +111,7 @@ public struct CertUtils {
 
         return "OID.\(oid)"
     }
-    
+
     /// Returns the issuer name of the certificate.
     /// - Returns: the issuer name of the certificate.
     /// - Throws: an  error from the [Security Framework Result Codes](https://developer.apple.com/documentation/security/security-framework-result-codes)  if the there is something wrong with the certificate
@@ -135,7 +135,7 @@ public struct CertUtils {
         }
         throw CertUtilsError.noIssuerName
     }
-    
+
     /// Returns the hexString of the serial number of the certificate
     /// - Returns: the hexString of the serial number of the certificate
     /// - Throws: an  error from the [Security Framework Result Codes](https://developer.apple.com/documentation/security/security-framework-result-codes)  if the there is something wrong with the certificate
@@ -149,7 +149,7 @@ public struct CertUtils {
 
         return serialNumber.hexString
     }
-    
+
     /// Returns the subject name of the certificate
     ///
     /// For the **e.firma** the subject is the RFC
@@ -161,9 +161,9 @@ public struct CertUtils {
         else {
             throw error!.takeRetainedValue() as Error
         }
-        
+
         let nsdict = dict as NSDictionary
-        
+
         if let subjectDict = nsdict[kSecOIDX509V1SubjectName] as? NSDictionary, let subjectArray = subjectDict[kSecPropertyKeyValue] as? [NSDictionary] {
             for item in subjectArray {
                 if let label = item[kSecPropertyKeyLabel] as? String, let value = item[kSecPropertyKeyValue] as? String, label == "2.5.4.45" {
@@ -174,7 +174,7 @@ public struct CertUtils {
 
         throw CertUtilsError.noRFC
     }
-    
+
     /// Creates the signature of the information using the private key
     /// - Parameter info: the information that has to be signed with the private key
     /// - Returns: the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) of the signature of the information using the private key
@@ -196,7 +196,7 @@ public struct CertUtils {
         }
         return signature.base64EncodedString()
     }
-    
+
     /// Returns the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) SHA1 hash of the data provided
     /// - Parameter data: the data information that needs to be hashed
     /// - Returns: the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) SHA1 hash of the data provided
@@ -204,12 +204,12 @@ public struct CertUtils {
         let digest = Insecure.SHA1.hash(data: data)
         return Data(digest).base64EncodedString()
     }
-    
+
     /// Returns the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) of the certData
     /// - Returns: the [base64EncodedString](https://developer.apple.com/documentation/foundation/data/base64encodedstring(options:)) of the certData
     public func getBase64StringCert() -> String {
         let certData = SecCertificateCopyData(certificate) as Data
         return certData.base64EncodedString()
     }
-
+    
 }

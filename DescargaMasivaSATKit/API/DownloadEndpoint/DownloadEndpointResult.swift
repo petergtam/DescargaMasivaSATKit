@@ -22,7 +22,7 @@ struct DownloadEndpointResultError : Error, Equatable {
     static var serializationFailed: DownloadEndpointResultError {
         .init(code: .serializationFailed)
     }
-
+    
     var localizedDescription: String {
         switch code {
         case .httpError(statusCode: let statusCode):
@@ -34,15 +34,15 @@ struct DownloadEndpointResultError : Error, Equatable {
 }
 
 class DownloadEndpointResult: NSObject {
-
+    
     var data: Data?
     var response: HTTPURLResponse?
     var completionHandler: (String?, Error?) -> Void
-
+    
     private var hasError = false
     private var result: [String: String] = [:]
     private var contents: [String] = []
-
+    
     init(
         data: Data?, response: URLResponse?,
         completionHandler: @escaping (String?, Error?) -> Void
@@ -52,7 +52,7 @@ class DownloadEndpointResult: NSObject {
         self.completionHandler = completionHandler
         super.init()
     }
-
+    
     func parse() {
         guard let response else {
             return
@@ -66,11 +66,11 @@ class DownloadEndpointResult: NSObject {
             parser.parse()
         }
     }
-
+    
 }
 
 extension DownloadEndpointResult: XMLParserDelegate {
-
+    
     func parserDidEndDocument(_ parser: XMLParser) {
         if hasError {
             completionHandler(nil, DownloadEndpointResultError.httpError(statusCode: response?.statusCode))
@@ -96,7 +96,7 @@ extension DownloadEndpointResult: XMLParserDelegate {
             completionHandler(jsonResult, nil)
         }
     }
-
+    
     func parser(
         _ parser: XMLParser, didStartElement elementName: String,
         namespaceURI: String?, qualifiedName qName: String?,
@@ -106,11 +106,11 @@ extension DownloadEndpointResult: XMLParserDelegate {
             result = attributeDict
         }
     }
-
+    
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         if string.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
             contents.append(string)
         }
     }
-
+    
 }

@@ -12,13 +12,13 @@ struct VerificationEndpointResultError: Error, Equatable {
         case httpError(statusCode: Int?)
         case serializationFailed
     }
-    
+
     private let code: Code
-    
+
     static func httpError(statusCode: Int?) -> VerificationEndpointResultError {
         .init(code: .httpError(statusCode: statusCode))
     }
-    
+
     static var serializationFailed: VerificationEndpointResultError {
         .init(code: .serializationFailed)
     }

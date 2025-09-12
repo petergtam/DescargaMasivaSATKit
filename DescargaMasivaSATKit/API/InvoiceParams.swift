@@ -16,7 +16,7 @@ public enum QueryType: String, CaseIterable, Identifiable {
     case pdf = "PDF"
     case pdfcocema = "PDFCOCEMA"
     case txt = "TXTUUIDMASIVA"
-
+    
     public var id: String {
         rawValue
     }
@@ -31,7 +31,7 @@ public enum ReceiptType: String, CaseIterable, Identifiable {
     case traslado = "T"
     case nomina = "N"
     case pago = "P"
-
+    
     public var id: String {
         rawValue
     }
@@ -48,7 +48,7 @@ public enum ReceiptStatus: String, CaseIterable, Identifiable {
     public var name: String {
         rawValue.capitalized
     }
-
+    
     public var id: String {
         name
     }
@@ -58,11 +58,11 @@ public enum ReceiptStatus: String, CaseIterable, Identifiable {
 public enum OperationType: String, CaseIterable, Identifiable {
     case emitidas
     case recibidas
-
+    
     public var name: String {
         rawValue.capitalized
     }
-
+    
     public var id: String {
         name
     }
@@ -72,7 +72,7 @@ public enum OperationType: String, CaseIterable, Identifiable {
 public enum EndPoint: String, CaseIterable, Identifiable {
     case facturas
     case retenciones
-
+    
     public var id: String {
         rawValue
     }
@@ -104,7 +104,7 @@ public struct InvoiceParams {
     public var isRetention: Bool {
         endPoint == .retenciones
     }
-
+    
     public init() {
         let calendar = Calendar.current
         let today = Date()
@@ -117,5 +117,5 @@ public struct InvoiceParams {
             endDate = final
         }
     }
-
+    
 }

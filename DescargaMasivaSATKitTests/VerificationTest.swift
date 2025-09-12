@@ -38,9 +38,9 @@ class StubVerificationSharedSession: SharedSession {
         .completed: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><VerificaSolicitudDescargaResponse xmlns="http://DescargaMasivaTerceros.sat.gob.mx"><VerificaSolicitudDescargaResult CodEstatus="5000" EstadoSolicitud="3" CodigoEstadoSolicitud="5010" NumeroCFDIs="1" Mensaje="Solicitud Aceptada"><IdsPaquetes>E7092BEB-1EAC-4C32-B4FE-DDA5FE95A712_01</IdsPaquetes></VerificaSolicitudDescargaResult></VerificaSolicitudDescargaResponse></s:Body></s:Envelope>"#,
         .rejected: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><VerificaSolicitudDescargaResponse xmlns="http://DescargaMasivaTerceros.sat.gob.mx"><VerificaSolicitudDescargaResult CodEstatus="5000" EstadoSolicitud="5" CodigoEstadoSolicitud="5004" NumeroCFDIs="0" Mensaje="Solicitud Aceptada"/></VerificaSolicitudDescargaResponse></s:Body></s:Envelope>"#,
         .expired: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><VerificaSolicitudDescargaResponse xmlns="http://DescargaMasivaTerceros.sat.gob.mx"><VerificaSolicitudDescargaResult CodEstatus="5000" EstadoSolicitud="6" CodigoEstadoSolicitud="5000" NumeroCFDIs="0" Mensaje="Solicitud Aceptada"/></VerificaSolicitudDescargaResponse></s:Body></s:Envelope>"#
-        
+
     ]
-    
+
     var response: Statuses = .accepted
     var statusCode = 200
     func data(for: URLRequest) async throws -> (Data, URLResponse) {
@@ -52,9 +52,9 @@ class StubVerificationSharedSession: SharedSession {
 }
 
 final class VerificationTest: XCTestCase {
-    
+
     let sharedSession = StubVerificationSharedSession()
-    
+
     override func setUpWithError() throws {
         if let certUrl = Bundle(for: VerificationTest.self).url(forResource: "certificate", withExtension: "cer"), let keyURL = Bundle(for: VerificationTest.self).url(forResource: "privkey", withExtension: "key") {
             let certData = try Data(contentsOf: certUrl)
@@ -67,7 +67,7 @@ final class VerificationTest: XCTestCase {
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
         XCTAssertNotNil(verification)
     }
-    
+
     func testInvalidCertRequest() async throws {
         sharedSession.response = .invalidCert
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
@@ -79,7 +79,7 @@ final class VerificationTest: XCTestCase {
             XCTAssertEqual(obj.result.Mensaje, "Certificado Inválido")
         }
     }
-    
+
     func testPublicRequest() async throws {
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
         let result = try await verification.request()
@@ -90,7 +90,7 @@ final class VerificationTest: XCTestCase {
             XCTAssertEqual(obj.result.Mensaje, "Certificado Inválido")
         }
     }
-    
+
     func testAcceptedRequest() async throws {
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
         let result = try await verification.request(sharedSession)
@@ -101,7 +101,7 @@ final class VerificationTest: XCTestCase {
             XCTAssertEqual(obj.result.EstadoSolicitud, 1)
         }
     }
-    
+
     func testCompletedRequest() async throws {
         sharedSession.response = .completed
         let verification = VerificationEndpoint(queryId: "03a57f63-de31-484c-b1ac-db9dc4e1c065")
@@ -114,7 +114,7 @@ final class VerificationTest: XCTestCase {
             XCTAssertEqual(obj.result.EstadoSolicitud, 3)
         }
     }
-    
+
     func testRejectedRequest() async throws {
         sharedSession.response = .rejected
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
@@ -125,7 +125,7 @@ final class VerificationTest: XCTestCase {
             XCTAssertEqual(obj.result.EstadoSolicitud, 5)
         }
     }
-    
+
     func testExpiredRequest() async throws {
         sharedSession.response = .expired
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")
@@ -136,7 +136,7 @@ final class VerificationTest: XCTestCase {
             XCTAssertEqual(obj.result.EstadoSolicitud, 6)
         }
     }
-    
+
     func test404Request() async {
         sharedSession.statusCode = 404
         let verification = VerificationEndpoint(queryId: "e3e2636f-c008-405b-a36c-205baabd9297")

@@ -17,7 +17,7 @@ class StubQuerySharedSession: SharedSession {
         case notControlled
         case exhausted
     }
-
+    
     let xmlResponses: [Statuses: String] = [
         .malformedXML: #"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><SolicitaDescargaEmitidosResponse xmlns="http://DescargaMasivaTerceros.sat.gob.mx"><SolicitaDescargaEmitidosResult CodEstatus="301" Mensaje="XML Mal Formado:La solicitud de descarga no es válida. La fecha inicial es mayor o igual a la fecha final."/></SolicitaDescargaEmitidosResponse></s:Body></s:Envelope>"#,
         .accepted:#"<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><SolicitaDescargaRecibidosResponse xmlns="http://DescargaMasivaTerceros.sat.gob.mx"><SolicitaDescargaRecibidosResult IdSolicitud="8b15cb57-85a4-4ef3-8797-805de260c6bb" RfcSolicitante="XAXX010101000" CodEstatus="5000" Mensaje="Solicitud Aceptada"/></SolicitaDescargaRecibidosResponse></s:Body></s:Envelope>"#,
@@ -185,5 +185,5 @@ final class QueryTest: XCTestCase {
         let request = QueryEndpoint(params: params)
         await XCTAssertThrowsErrorAsync(try await request.request(sharedSession), QueryEndpointResultError.httpError(statusCode: 404))
     }
-
+    
 }
