@@ -28,7 +28,6 @@ struct StubAuthenticationSharedSession: SharedSession {
         return formatter.date(from: "2025-09-12T06:31:33.285Z")!
     }
     func data(for: URLRequest) async throws -> (Data, URLResponse) {
-        print("Using stub")
         let xml = xmlResponses[response]!
         let data = xml.data(using: .utf8)!
         let urlResponse = HTTPURLResponse(url: URL(string:"https://cfdidescargamasivasolicitud.clouda.sat.gob.mx/Autenticacion/Autenticacion.svc")!, statusCode: statusCode, httpVersion: "1.1",  headerFields: ["Content-Encoding": "gzip", "Content-Length": "801", "Content-Type": "text/xml; charset=utf-8", "Date": "Thu, 11 Sep 2025 05:29:59 GMT", "Server": "Microsoft-IIS/10.0", "Strict-Transport-Security": "max-age=31536000; includeSubDomains", "Vary": "Accept-Encoding", "x-content-type-options": "nosniff", "x-frame-options": "SAMEORIGIN", "x-xss-protection": "1"])!
@@ -82,7 +81,15 @@ final class Authentication: XCTestCase {
         XCTAssert(tokens.count > 0)
         XCTAssertEqual(token, tokens["CFDI"])
     }
-    
+
+    func testPublicTokenRequest() async throws {
+        try loadCertificates()
+        let token = try await AuthenticationManager.shared.getToken()
+        let tokens = AuthenticationManager.shared.getTokens()
+        XCTAssert(tokens.count > 0)
+        XCTAssertEqual(token, tokens["CFDI"])
+    }
+
     func testGetCFDIMultipleToken() async throws {
         sharedSession.response = .cfdi
         try loadCertificates()
