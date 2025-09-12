@@ -30,7 +30,7 @@ struct VerificationEndpointError: Error {
 ///
 /// - SeeAlso: [SAT Verification Documentation](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/2_WS_Verificacion_de_Descarga_Masiva_V1_5_VF_5e53cc2bb5.pdf)
 ///
-public class VerificationEndpoint {
+public struct VerificationEndpoint {
     private var queryId: String
     private var isRetention: Bool
     
