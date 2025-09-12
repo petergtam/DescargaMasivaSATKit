@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct AuthenticationResultError: Error {
-    private enum Code {
+struct AuthenticationResultError: Error, Equatable {
+    private enum Code: Equatable {
         case dateParsingFailed(contents: [String])
         case httpError(statusCode: Int?, contents: [String])
     }

@@ -83,7 +83,6 @@ public struct QueryEndpoint {
         nodo +=  " EstadoComprobante=\"\(params.receiptStatus.name)\""
         if params.invoiceId != "" {
             nodo += " Folio=\"\(params.invoiceId)\""
-            nodo += " RfcSolicitante=\"\(rfc)\""
         }else {
             let calendar = Calendar.current
             let initialDate = calendar.startOfDay(for: params.startDate)
@@ -93,7 +92,6 @@ public struct QueryEndpoint {
             }
             nodo += params.operation == .recibidas ? " RfcReceptor=\"\(rfc)\"" : ""
             nodo += params.operation == .emitidas ? " RfcEmisor=\"\(rfc)\"" : ""
-            nodo += " RfcSolicitante=\"\(rfc)\""
         }
         if let comprobante = params.receiptType {
             nodo += " TipoComprobante=\"\(comprobante.rawValue)\""
@@ -107,6 +105,10 @@ public struct QueryEndpoint {
     /// - Returns: a json string representation of the result of the request
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``AuthenticationManager/add(certUtils:)`` or ``AuthenticationManager/add(certData:keyData:)`` has not been called yet.
     public func request() async throws -> String {
+        try await request(URLSession.shared)
+    }
+    
+    func request(_ sharedSession: SharedSession = URLSession.shared) async throws -> String {
         let tokenData = try await AuthenticationManager.shared.getToken(isRetention: params.isRetention)
         let body = try createSolicitaDescargaBody()
         guard let url = URL(string: "https://\(params.isRetention ? "reten": "cfdi")descargamasivasolicitud.clouda.sat.gob.mx/SolicitaDescargaService.svc") else {
@@ -120,12 +122,12 @@ public struct QueryEndpoint {
         request.httpMethod = "POST"
         request.httpBody = body.data(using: .utf8)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await sharedSession.data(for: request)
         
-        return await withCheckedContinuation { continuation in
+        return try await withCheckedThrowingContinuation { continuation in
             let reqResult = QueryEndpointResult(data: data, response: response){ result, error in
                 if let error {
-                    continuation.resume(throwing: error as! Never)
+                    continuation.resume(throwing: error)
                     return
                 }
                 if let result {

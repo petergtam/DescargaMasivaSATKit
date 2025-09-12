@@ -35,7 +35,7 @@ final class CertUtilsTest: XCTestCase {
             XCTAssertThrowsError(try CertUtils(certData: certData, keyData: keyData))
         }
     }
-
+    
     func testInit() throws {
         if let certUrl = Bundle(for: CertUtilsTest.self).url(forResource: "certificate", withExtension: ".cer"), let keyUrl = Bundle(for: CertUtilsTest.self).url(forResource: "privkey", withExtension: ".key") {
             let certData = try Data(contentsOf: certUrl)
@@ -86,5 +86,5 @@ final class CertUtilsTest: XCTestCase {
             XCTAssertEqual(signature, "LXITeTCS72bZdJ5hQiL1uOwPBhbSIIJbe01Le8ITpDFshn/YSe+Y7C8sqf1bW9rYeVR+ikxg7zAXs7Rtyz0jwt5lfVHIE1JW7gGU4J5m61cs0xGHPjFBINNagWZN2GnKt0kD+JbpMea9lFCLZ7m2HFltcNCdUUGTcbAnuzpfAXyw/LTXkHpQbnXOqtvyGhqKhTPS+jMtmnJVmcbJasJ7ZACcIEIKyv4blB8qGPAdq12QpmQ6pyBxxpXeTfBSqbdLfSvZ1bTniDHKSWq9NyTsc32EyfnFXXZWgeBZ0i5Kzl1IDnycY2imut145AcpJi19kUmbWgNhklBpTn2pepQ16A==")
         }
     }
-
+    
 }

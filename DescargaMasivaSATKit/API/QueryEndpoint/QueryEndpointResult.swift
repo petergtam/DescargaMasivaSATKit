@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct QueryEndpointResultError : Error {
-    private enum Code {
+struct QueryEndpointResultError : Error, Equatable {
+    private enum Code: Equatable {
         case httpError(statusCode: Int?)
         case serializationFailed
     }
@@ -22,7 +22,7 @@ struct QueryEndpointResultError : Error {
     static var serializationFailed: QueryEndpointResultError {
         .init(code: .serializationFailed)
     }
-
+    
     var localizedDescription: String {
         switch code {
         case .httpError(statusCode: let statusCode):

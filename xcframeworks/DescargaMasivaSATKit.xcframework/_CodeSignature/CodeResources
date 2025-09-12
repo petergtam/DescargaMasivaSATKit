@@ -6,47 +6,43 @@
 	<dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/DescargaMasivaSATKit</key>
 		<data>
-		yjsSto24hgkOf0awS3Jy39JyAMk=
+		RkroVGjM8b7vCrSrU+XReGAU9Y0=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.abi.json</key>
 		<data>
-		UvTDoPJ6oQi+RmZxbR3PNPzXisc=
+		tYKOsTmXq0nUyKGcdCgqp0oqmzw=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
 		<data>
-		E/V5QL+MHJrgFynyzuIKAcngF4g=
+		iBsJvthTXoRuwYs7kuN8EWZ1Lbk=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.swiftdoc</key>
 		<data>
-		oIK7cEuvy+pQabqiQ9PWX7gdKzQ=
+		4mg/aau9RUQCk+VTjgiqaRjhMdk=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.swiftinterface</key>
 		<data>
-		E/V5QL+MHJrgFynyzuIKAcngF4g=
+		iBsJvthTXoRuwYs7kuN8EWZ1Lbk=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.abi.json</key>
 		<data>
-		UvTDoPJ6oQi+RmZxbR3PNPzXisc=
+		tYKOsTmXq0nUyKGcdCgqp0oqmzw=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
 		<data>
-		oDZ3Ul9adLLb+TDHadzVTlAQeDw=
+		Nt+7p3sT9z7U9oxl6mqJnlA2Iyk=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<data>
-		XoHy0v0VZe2VDcd7skhYqF6qvoo=
+		VnZUCgk1yi/WRNdqILQS7H2Nt3Y=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.swiftinterface</key>
 		<data>
-		oDZ3Ul9adLLb+TDHadzVTlAQeDw=
+		Nt+7p3sT9z7U9oxl6mqJnlA2Iyk=
 		</data>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Resources/Info.plist</key>
 		<data>
 		7M0sl6rCyYojl7Sr4qHoRinSi0I=
-		</data>
-		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/_CodeSignature/CodeResources</key>
-		<data>
-		iUliCf49tg1GIF4/gtzQ2af+2AA=
 		</data>
 		<key>macos-arm64_x86_64/dSYMs/DescargaMasivaSATKit.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -54,15 +50,15 @@
 		</data>
 		<key>macos-arm64_x86_64/dSYMs/DescargaMasivaSATKit.framework.dSYM/Contents/Resources/DWARF/DescargaMasivaSATKit</key>
 		<data>
-		RI8gP5dHxaDzs21LnJ9k+F+y++Q=
+		ASJnN0t3nxsZDZATo87L1ijEslc=
 		</data>
 		<key>macos-arm64_x86_64/dSYMs/DescargaMasivaSATKit.framework.dSYM/Contents/Resources/Relocations/aarch64/DescargaMasivaSATKit.yml</key>
 		<data>
-		dYzXaZ9YdR8IScqE9undt0UtfVo=
+		YgbBPkY1QRgrLabegG++pDwaDBY=
 		</data>
 		<key>macos-arm64_x86_64/dSYMs/DescargaMasivaSATKit.framework.dSYM/Contents/Resources/Relocations/x86_64/DescargaMasivaSATKit.yml</key>
 		<data>
-		Gg0lRmrxiHuBldmjyf0uIbQqeb4=
+		ezggT3GrGvjw5V7usNYr0g8gwZk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -86,99 +82,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yjsSto24hgkOf0awS3Jy39JyAMk=
+			RkroVGjM8b7vCrSrU+XReGAU9Y0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q8+7fvjm2HPXvXX+FyIx13gMa0ZPtTMtctaw6TbIa2E=
+			l88xx3IKtiNDEtUVZB+ZZ2IQqxLxD36yMP8N3C33V5I=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UvTDoPJ6oQi+RmZxbR3PNPzXisc=
+			tYKOsTmXq0nUyKGcdCgqp0oqmzw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Aa/DMXkcSWm8jXEKw3+Gm0/DZxcZo0pgfjD6e65uYNE=
+			+gk25t/K0qsKukHOApvWI0PxDiPNQG/7S514aYb/hsg=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E/V5QL+MHJrgFynyzuIKAcngF4g=
+			iBsJvthTXoRuwYs7kuN8EWZ1Lbk=
 			</data>
 			<key>hash2</key>
 			<data>
-			JE9WkfvX3tbHijfYYsRGq2qg27ZXxYUIPolFHJvtUP8=
+			ygrLxh8aVEHChpkOzQWZyTi6ZqXzZW7kUiaXpnUUmx8=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oIK7cEuvy+pQabqiQ9PWX7gdKzQ=
+			4mg/aau9RUQCk+VTjgiqaRjhMdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			btbXHhjifMsXHRjYWKL861Lcq9/7FN75e+QZwMW57bY=
+			zD5NdM06E06IYt+HlFMoCuaqFZDWzKXvwrx8SHVHUCk=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/arm64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E/V5QL+MHJrgFynyzuIKAcngF4g=
+			iBsJvthTXoRuwYs7kuN8EWZ1Lbk=
 			</data>
 			<key>hash2</key>
 			<data>
-			JE9WkfvX3tbHijfYYsRGq2qg27ZXxYUIPolFHJvtUP8=
+			ygrLxh8aVEHChpkOzQWZyTi6ZqXzZW7kUiaXpnUUmx8=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UvTDoPJ6oQi+RmZxbR3PNPzXisc=
+			tYKOsTmXq0nUyKGcdCgqp0oqmzw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Aa/DMXkcSWm8jXEKw3+Gm0/DZxcZo0pgfjD6e65uYNE=
+			+gk25t/K0qsKukHOApvWI0PxDiPNQG/7S514aYb/hsg=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oDZ3Ul9adLLb+TDHadzVTlAQeDw=
+			Nt+7p3sT9z7U9oxl6mqJnlA2Iyk=
 			</data>
 			<key>hash2</key>
 			<data>
-			8fKTgGlrQQBUDzYkxt5hkZbs7yhKPn/KZNBaDXxgBMw=
+			CWPUV8OUCETxuhJ56cCykRokoB5tXELTYPRV/fEUV3s=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XoHy0v0VZe2VDcd7skhYqF6qvoo=
+			VnZUCgk1yi/WRNdqILQS7H2Nt3Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			iCxksLpS6v3SjVZ8hCaM6QaYSrpwjoi9htoJ4qUnLQI=
+			K1JTfwPJWbJobJ7DTOMZXHwZBf7qt24DS09NSIC+Sas=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Modules/DescargaMasivaSATKit.swiftmodule/x86_64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oDZ3Ul9adLLb+TDHadzVTlAQeDw=
+			Nt+7p3sT9z7U9oxl6mqJnlA2Iyk=
 			</data>
 			<key>hash2</key>
 			<data>
-			8fKTgGlrQQBUDzYkxt5hkZbs7yhKPn/KZNBaDXxgBMw=
+			CWPUV8OUCETxuhJ56cCykRokoB5tXELTYPRV/fEUV3s=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/Resources/Info.plist</key>
@@ -190,17 +186,6 @@
 			<key>hash2</key>
 			<data>
 			ED3L2IjHvTl2BA3OvpO3mT//3T94BxUtLMd9rW7g+b4=
-			</data>
-		</dict>
-		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/A/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			iUliCf49tg1GIF4/gtzQ2af+2AA=
-			</data>
-			<key>hash2</key>
-			<data>
-			4coP945+dKHq6ZsO+yaohf/KT+eVcs7OLqZlSb5itIo=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/DescargaMasivaSATKit.framework/Versions/Current</key>
@@ -223,33 +208,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RI8gP5dHxaDzs21LnJ9k+F+y++Q=
+			ASJnN0t3nxsZDZATo87L1ijEslc=
 			</data>
 			<key>hash2</key>
 			<data>
-			qIs1TF1oQbSi94ES7jXpmME/0ZQOtAbwgjnXow5KLpM=
+			T1GWQ2E2x//KkiueEqFG4NPrtDvekPpT83WY4nLLGvQ=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/dSYMs/DescargaMasivaSATKit.framework.dSYM/Contents/Resources/Relocations/aarch64/DescargaMasivaSATKit.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dYzXaZ9YdR8IScqE9undt0UtfVo=
+			YgbBPkY1QRgrLabegG++pDwaDBY=
 			</data>
 			<key>hash2</key>
 			<data>
-			u/6m1XFiznCF5nGAWJ3wgSRyyPREvyvSZykG7yLvxrI=
+			O+1IX/HTbQrtDgc/FkSMGc2pE0y7AIWFcsvcgr5Ghag=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/dSYMs/DescargaMasivaSATKit.framework.dSYM/Contents/Resources/Relocations/x86_64/DescargaMasivaSATKit.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Gg0lRmrxiHuBldmjyf0uIbQqeb4=
+			ezggT3GrGvjw5V7usNYr0g8gwZk=
 			</data>
 			<key>hash2</key>
 			<data>
-			clbCUdbP/XwBASTNyO6F4WkOyVN9QoMLjm5AgM9sqHo=
+			8XLVPnz5AA/hUFGn04Iv1zcrqoc1LUewotsb5zJ2v48=
 			</data>
 		</dict>
 	</dict>

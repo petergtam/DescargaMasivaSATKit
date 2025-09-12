@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct VerificationEndpointResultError: Error {
-    private enum Code {
+struct VerificationEndpointResultError: Error, Equatable {
+    private enum Code: Equatable {
         case httpError(statusCode: Int?)
         case serializationFailed
     }
-    
+
     private let code: Code
-    
+
     static func httpError(statusCode: Int?) -> VerificationEndpointResultError {
         .init(code: .httpError(statusCode: statusCode))
     }
-    
+
     static var serializationFailed: VerificationEndpointResultError {
         .init(code: .serializationFailed)
     }
