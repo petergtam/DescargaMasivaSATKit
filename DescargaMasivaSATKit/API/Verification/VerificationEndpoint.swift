@@ -30,7 +30,7 @@ struct VerificationEndpointError: Error {
 ///
 /// - SeeAlso: [SAT Verification Documentation](https://ampocdevbuk01a.s3.us-east-1.amazonaws.com/2_WS_Verificacion_de_Descarga_Masiva_V1_5_VF_5e53cc2bb5.pdf)
 ///
-public struct VerificationEndpoint {
+public class VerificationEndpoint {
     private var queryId: String
     private var isRetention: Bool
     
@@ -79,6 +79,10 @@ public struct VerificationEndpoint {
     /// - Returns: a json string representation of the result of the verification and the contents of the packages to download if the verification is successful
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``AuthenticationManager/add(certUtils:)`` or ``AuthenticationManager/add(certData:keyData:)`` has not been called yet.
     public func request() async throws -> String {
+        try await request(URLSession.shared)
+    }
+    
+    func request(_ sharedSession: SharedSession = URLSession.shared) async throws -> String {
         let tokenData = try await AuthenticationManager.shared.getToken(isRetention: isRetention)
         let body = try createVerificaSolicitudDescargaBody()
         
@@ -93,12 +97,12 @@ public struct VerificationEndpoint {
         request.httpMethod = "POST"
         request.httpBody = body.data(using: .utf8)
         
-        let (data, response) =  try await URLSession.shared.data(for: request)
+        let (data, response) =  try await sharedSession.data(for: request)
         
-        return await withCheckedContinuation { continuation in
+        return try await withCheckedThrowingContinuation { continuation in
             let verResult = VerificationEndpointResult(data: data, response: response){ result, error in
                 if let error {
-                    continuation.resume(throwing: error as! Never)
+                    continuation.resume(throwing: error)
                     return
                 }
                 if let result {

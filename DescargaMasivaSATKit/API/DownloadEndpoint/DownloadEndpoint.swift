@@ -79,6 +79,10 @@ public struct DownloadEndpoint {
     /// - Returns: a json string representation of the result and the contents of the package to download
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``AuthenticationManager/add(certUtils:)`` or ``AuthenticationManager/add(certData:keyData:)`` has not been called yet.
     public func request() async throws -> String {
+        try await request(URLSession.shared)
+    }
+    
+    func request(_ sharedSession: SharedSession) async throws -> String {
         let tokenData = try await AuthenticationManager.shared.getToken(isRetention: isRetention)
         
         let body = try createDescargaBody()
@@ -94,12 +98,12 @@ public struct DownloadEndpoint {
         request.httpMethod = "POST"
         request.httpBody = body.data(using: .utf8)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await sharedSession.data(for: request)
         
-        return await withCheckedContinuation { continuation in
+        return try await withCheckedThrowingContinuation { continuation in
             let downResult = DownloadEndpointResult(data: data, response: response){ result, error in
                 if let error {
-                    continuation.resume(throwing: error as! Never)
+                    continuation.resume(throwing: error)
                 }
                 if let result {
                     continuation.resume(returning: result)

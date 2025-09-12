@@ -61,6 +61,11 @@ public class AuthenticationManager {
     
     private init() {}
     
+    func reset() {
+        certUtils = nil
+        tokens = [:]
+    }
+
     /// Creates the certUtils object for the manager.
     /// - Parameters:
     ///   - certData: the certificate data of your **e.firma** in DER format.
@@ -92,40 +97,44 @@ public class AuthenticationManager {
     /// - Returns: a TokenData object with the information of the current token.
     /// - Throws: a `noCertUtils` error if there is no certUtils object for the manager. That is ``add(certUtils:)`` or ``add(certData:keyData:)`` has not been called yet.
     public func getToken(isRetention: Bool = false) async throws -> TokenData {
+        try await getToken(URLSession.shared, Date.now, isRetention: isRetention)
+    }
+    
+    func getToken(_ sharedSession: SharedSession = URLSession.shared, _ now: Date = Date.now , isRetention: Bool = false) async throws -> TokenData {
         if isRetention {
-            return try await getRetenAuthenticationToken()
+            return try await getRetenAuthenticationToken(sharedSession, now)
         }else {
-            return try await getCFDIAuthenticationToken()
+            return try await getCFDIAuthenticationToken(sharedSession, now)
         }
     }
     
-    private func getCFDIAuthenticationToken() async throws -> TokenData {
+    private func getCFDIAuthenticationToken(_ sharedSession: SharedSession = URLSession.shared, _ now: Date = Date.now) async throws -> TokenData {
         if let tokenData = tokens["CFDI"] {
-            if Date.now < tokenData.expires {
+            if now < tokenData.expires {
                 return tokenData
             }else {
-                let token = try await createTokenData()
+                let token = try await createTokenData(sharedSession)
                 tokens["CFDI"]  = token
                 return token
             }
         } else {
-            let token = try await createTokenData()
+            let token = try await createTokenData(sharedSession)
             tokens["CFDI"]  = token
             return token
         }
     }
     
-    private func getRetenAuthenticationToken() async throws -> TokenData {
+    private func getRetenAuthenticationToken(_ sharedSession: SharedSession = URLSession.shared, _ now: Date = Date.now) async throws -> TokenData {
         if let tokenData = tokens["Retencion"] {
-            if Date.now < tokenData.expires {
+            if now < tokenData.expires {
                 return tokenData
             }else {
-                let token = try await createTokenData(isRetention: true)
+                let token = try await createTokenData(sharedSession, isRetention: true)
                 tokens["Retencion"] = token
                 return token
             }
         }else {
-            let token = try await createTokenData(isRetention: true)
+            let token = try await createTokenData(sharedSession, isRetention: true)
             tokens["Retencion"] = token
             return token
         }
@@ -155,7 +164,7 @@ public class AuthenticationManager {
         return "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:u=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><s:Header><o:Security s:mustUnderstand=\"1\" xmlns:o=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\"><u:Timestamp u:Id=\"_0\"><u:Created>\(created)</u:Created></u:Timestamp><o:BinarySecurityToken u:Id=\"uuid-\(uuid.uuidString.lowercased())-1\" ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\" EncodingType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\">\(certUtils.getBase64StringCert())</o:BinarySecurityToken><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"></CanonicalizationMethod><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"></SignatureMethod><Reference URI=\"#_0\"><Transforms><Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"></DigestMethod><DigestValue>\(digestValue)</DigestValue></Reference></SignedInfo><SignatureValue>\(signature)</SignatureValue><KeyInfo><o:SecurityTokenReference><o:Reference ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\" URI=\"#uuid-\(uuid.uuidString.lowercased())-1\"></o:Reference></o:SecurityTokenReference></KeyInfo></Signature></o:Security></s:Header><s:Body><Autentica xmlns=\"http://DescargaMasivaTerceros.gob.mx\"></Autentica></s:Body></s:Envelope>"
     }
     
-    private func createTokenData(isRetention: Bool = false) async throws -> TokenData {
+    private func createTokenData(_ sharedSession: SharedSession = URLSession.shared, isRetention: Bool = false) async throws -> TokenData {
         let body = try createAuthenticationBody()
         
         guard let url = URL(string: "https://\(isRetention ? "reten" : "cfdi")descargamasivasolicitud.clouda.sat.gob.mx/Autenticacion/Autenticacion.svc") else {
@@ -168,7 +177,9 @@ public class AuthenticationManager {
         request.httpMethod = "POST"
         request.httpBody = body.data(using: .utf8)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await sharedSession.data(for: request)
+        
+        print(String(data: data, encoding: .utf8)!, response.debugDescription)
         
         return await withCheckedContinuation { continuation in
             let autResult = AuthenticationResult(data: data, response: response){ (created, expires, token, error) in

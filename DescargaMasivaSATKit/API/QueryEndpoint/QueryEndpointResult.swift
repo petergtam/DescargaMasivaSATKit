@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct QueryEndpointResultError : Error {
-    private enum Code {
+struct QueryEndpointResultError : Error, Equatable {
+    private enum Code: Equatable {
         case httpError(statusCode: Int?)
         case serializationFailed
     }
