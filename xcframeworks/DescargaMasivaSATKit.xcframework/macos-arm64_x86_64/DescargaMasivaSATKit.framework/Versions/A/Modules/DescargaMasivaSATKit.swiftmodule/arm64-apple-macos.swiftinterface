@@ -50,10 +50,9 @@ public struct QueryResult : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public class VerificationEndpoint {
+public struct VerificationEndpoint {
   public init(queryId: Swift.String, isRetention: Swift.Bool = false)
   public func request() async throws -> Swift.String
-  @objc deinit
 }
 public struct VerificationResponse : Swift.Codable {
   public var result: DescargaMasivaSATKit.VerificationResult

@@ -1758,7 +1758,7 @@
                 "kind": "TypeNominal",
                 "name": "VerificationEndpoint",
                 "printedName": "DescargaMasivaSATKit.VerificationEndpoint",
-                "usr": "s:20DescargaMasivaSATKit20VerificationEndpointC"
+                "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV"
               },
               {
                 "kind": "TypeNominal",
@@ -1775,8 +1775,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointC7queryId11isRetentionACSS_Sbtcfc",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointC7queryId11isRetentionACSS_Sbtcfc",
+            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV7queryId11isRetentionACSS_Sbtcfc",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV7queryId11isRetentionACSS_Sbtcfc",
             "moduleName": "DescargaMasivaSATKit",
             "declAttributes": [
               "AccessControl",
@@ -1797,8 +1797,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointC7requestSSyYaKF",
-            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointC7requestSSyYaKF",
+            "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV7requestSSyYaKF",
+            "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV7requestSSyYaKF",
             "moduleName": "DescargaMasivaSATKit",
             "declAttributes": [
               "AccessControl",
@@ -1808,9 +1808,9 @@
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Class",
-        "usr": "s:20DescargaMasivaSATKit20VerificationEndpointC",
-        "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointC",
+        "declKind": "Struct",
+        "usr": "s:20DescargaMasivaSATKit20VerificationEndpointV",
+        "mangledName": "$s20DescargaMasivaSATKit20VerificationEndpointV",
         "moduleName": "DescargaMasivaSATKit",
         "declAttributes": [
           "AccessControl",
@@ -6211,133 +6211,133 @@
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationResult.swift",
       "kind": "Array",
-      "offset": 1250,
+      "offset": 1272,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationResult.swift",
       "kind": "BooleanLiteral",
-      "offset": 1280,
+      "offset": 1302,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/DownloadEndpoint\/DownloadEndpoint.swift",
       "kind": "BooleanLiteral",
-      "offset": 1181,
+      "offset": 1165,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/DownloadEndpoint\/DownloadEndpointResult.swift",
       "kind": "BooleanLiteral",
-      "offset": 1033,
+      "offset": 1045,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/DownloadEndpoint\/DownloadEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 1082,
+      "offset": 1094,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/DownloadEndpoint\/DownloadEndpointResult.swift",
       "kind": "Array",
-      "offset": 1123,
+      "offset": 1135,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/DownloadEndpoint\/DownloadEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 3147,
+      "offset": 3179,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
       "kind": "BooleanLiteral",
-      "offset": 1030,
+      "offset": 1034,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 1079,
+      "offset": 1083,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/QueryEndpoint\/QueryEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 2958,
+      "offset": 2962,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpoint.swift",
       "kind": "BooleanLiteral",
-      "offset": 1191,
+      "offset": 1192,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
       "kind": "BooleanLiteral",
-      "offset": 1052,
+      "offset": 1040,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 1101,
+      "offset": 1089,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
       "kind": "Array",
-      "offset": 1142,
+      "offset": 1130,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Verification\/VerificationEndpointResult.swift",
       "kind": "Dictionary",
-      "offset": 3174,
+      "offset": 3162,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationManager.swift",
       "kind": "Dictionary",
-      "offset": 1501,
+      "offset": 1488,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3278,
+      "offset": 3237,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3521,
+      "offset": 3476,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/Authentication.swift",
+      "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/Authentication\/AuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8293,
+      "offset": 8203,
       "length": 5,
       "value": "false"
     },
@@ -6379,42 +6379,42 @@
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
       "kind": "StringLiteral",
-      "offset": 865,
+      "offset": 869,
       "length": 3,
       "value": "\"I\""
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
       "kind": "StringLiteral",
-      "offset": 887,
+      "offset": 891,
       "length": 3,
       "value": "\"E\""
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
       "kind": "StringLiteral",
-      "offset": 911,
+      "offset": 915,
       "length": 3,
       "value": "\"T\""
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
       "kind": "StringLiteral",
-      "offset": 933,
+      "offset": 937,
       "length": 3,
       "value": "\"N\""
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
       "kind": "StringLiteral",
-      "offset": 953,
+      "offset": 957,
       "length": 3,
       "value": "\"P\""
     },
     {
       "filePath": "\/Users\/psalas\/Vansi\/DescargaMasivaSATKit\/DescargaMasivaSATKit\/API\/InvoiceParams.swift",
       "kind": "StringLiteral",
-      "offset": 2895,
+      "offset": 2919,
       "length": 2,
       "value": "\"\""
     }
