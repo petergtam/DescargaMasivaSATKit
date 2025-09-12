@@ -134,7 +134,6 @@ final class QueryTest: XCTestCase {
         if let data = result.data(using: .utf8) {
             let obj = try JSONDecoder().decode(QueryResponse.self, from: data)
             XCTAssertNotNil(obj.result)
-            print(result)
             XCTAssertNotEqual(obj.result.IdSolicitud, "")
             XCTAssertNotEqual(obj.result.RfcSolicitante, "")
             XCTAssertEqual(obj.result.CodEstatus, 5004)

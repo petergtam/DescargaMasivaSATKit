@@ -108,7 +108,6 @@ final class VerificationTest: XCTestCase {
         let result = try await verification.request(sharedSession)
         if let data = result.data(using: .utf8) {
             let obj = try JSONDecoder().decode(VerificationResponse.self, from: data)
-            print(result)
             XCTAssertEqual(obj.contents?.count, obj.result.NumeroCFDIs)
             XCTAssertEqual(obj.result.CodEstatus,5000)
             XCTAssertEqual(obj.result.EstadoSolicitud, 3)
