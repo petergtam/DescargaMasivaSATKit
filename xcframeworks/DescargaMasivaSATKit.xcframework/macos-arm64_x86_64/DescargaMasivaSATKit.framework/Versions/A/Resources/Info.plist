@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>DescargaMasivaSATKit</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.mx.yabd.DescargaMasivaKit</string>
+	<string>mx.com.yabd.DescargaMasivaSATKit</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
