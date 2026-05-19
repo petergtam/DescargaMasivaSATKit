@@ -1,4 +1,4 @@
-# ``DescargaMasivaSATKit``
+# DescargaMasivaSATKit
 
 @Metadata {
     @Available(macOS, introduced: "12.0")
