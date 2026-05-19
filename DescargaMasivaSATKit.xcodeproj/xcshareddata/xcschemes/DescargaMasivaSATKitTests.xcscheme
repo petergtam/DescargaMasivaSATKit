@@ -6,22 +6,6 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC26D2272E68A34D00E71C6B"
-               BuildableName = "DescargaMasivaSATKit.framework"
-               BlueprintName = "DescargaMasivaSATKit"
-               ReferencedContainer = "container:DescargaMasivaSATKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -29,6 +13,19 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EC26D2322E68A34E00E71C6B"
+               BuildableName = "DescargaMasivaSATKitTests.xctest"
+               BlueprintName = "DescargaMasivaSATKitTests"
+               ReferencedContainer = "container:DescargaMasivaSATKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -48,15 +45,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC26D2272E68A34D00E71C6B"
-            BuildableName = "DescargaMasivaSATKit.framework"
-            BlueprintName = "DescargaMasivaSATKit"
-            ReferencedContainer = "container:DescargaMasivaSATKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

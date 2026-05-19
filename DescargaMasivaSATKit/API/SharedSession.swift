@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SharedSession {
-    func data(for: URLRequest) async throws -> (Data, URLResponse)
+  func data(for: URLRequest) async throws -> (Data, URLResponse)
 }
 
-extension URLSession : SharedSession { }
+extension URLSession: SharedSession {}
