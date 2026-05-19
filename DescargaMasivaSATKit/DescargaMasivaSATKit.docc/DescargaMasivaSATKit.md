@@ -1,4 +1,4 @@
-# DescargaMasivaSATKit
+# ``DescargaMasivaSATKit``
 
 @Metadata {
     @Available(macOS, introduced: "12.0")
@@ -8,7 +8,7 @@ Consult your invoices using the Descargas Masivas service from the SAT
 
 ## Overview
 
-DescargaMasivaSATKit provides a set of features that allows you to use the Descargas Masivas service from the SAT. The framework porpuse is to provide an easy way for developers to use the service using Swift.
+DescargaMasivaSATKit provides a set of features that allows you to use the Descargas Masivas service from the SAT. The framework purpose is to provide an easy way for developers to use the service using Swift.
 
 The framework provides two major features.
 
