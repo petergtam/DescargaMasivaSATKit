@@ -1,25 +1,26 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-macos12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DescargaMasivaSATKit
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-macos12.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DescargaMasivaSATKit
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import CryptoKit
 import Foundation
 import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public struct TokenData : Swift.Sendable, Swift.Equatable {
+  public static func == (a: DescargaMasivaSATKit.TokenData, b: DescargaMasivaSATKit.TokenData) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class AuthenticationManager {
+  public static let shared: DescargaMasivaSATKit.AuthenticationManager
+  public func add(certData: Foundation.Data, keyData: Foundation.Data) async throws
+  public func add(certUtils: DescargaMasivaSATKit.CertUtils)
+  public func getToken(isRetention: Swift.Bool = false) async throws -> DescargaMasivaSATKit.TokenData
+  @objc deinit
+}
 public struct DownloadEndpoint {
   public init(packageId: Swift.String, isRetention: Swift.Bool = false)
   public func request() async throws -> Swift.String
-}
-public struct CertUtils {
-  public init(certData: Foundation.Data, keyData: Foundation.Data) throws
-  public func getIssuerName() throws -> Swift.String
-  public func getSerialNumber() throws -> Swift.String
-  public func getSubjectName() throws -> Swift.String
-  public func createSignature(for info: Foundation.Data) throws -> Swift.String
-  public func getSHA1Hash(for data: Foundation.Data) -> Swift.String
-  public func getBase64StringCert() -> Swift.String
 }
 public struct DownloadResponse : Swift.Codable {
   public var result: DescargaMasivaSATKit.DownloadResult
@@ -70,17 +71,7 @@ public struct VerificationResult : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct TokenData : Swift.Sendable, Swift.Equatable {
-  public static func == (a: DescargaMasivaSATKit.TokenData, b: DescargaMasivaSATKit.TokenData) -> Swift.Bool
-}
-@_hasMissingDesignatedInitializers public class AuthenticationManager {
-  public static let shared: DescargaMasivaSATKit.AuthenticationManager
-  public func add(certData: Foundation.Data, keyData: Foundation.Data) throws
-  public func add(certUtils: DescargaMasivaSATKit.CertUtils)
-  public func getToken(isRetention: Swift.Bool = false) async throws -> DescargaMasivaSATKit.TokenData
-  @objc deinit
-}
-public enum QueryType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+public enum QueryType : Swift.String, Swift.CaseIterable, Swift.Identifiable, Swift.Codable {
   case metadata
   case cfdi
   case pdf
@@ -100,7 +91,7 @@ public enum QueryType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
     get
   }
 }
-public enum ReceiptType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+public enum ReceiptType : Swift.String, Swift.CaseIterable, Swift.Identifiable, Swift.Codable {
   case ingreso
   case egreso
   case traslado
@@ -120,7 +111,7 @@ public enum ReceiptType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
     get
   }
 }
-public enum ReceiptStatus : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+public enum ReceiptStatus : Swift.String, Swift.CaseIterable, Swift.Identifiable, Swift.Codable {
   case todos
   case cancelado
   case vigente
@@ -141,7 +132,7 @@ public enum ReceiptStatus : Swift.String, Swift.CaseIterable, Swift.Identifiable
     get
   }
 }
-public enum OperationType : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+public enum OperationType : Swift.String, Swift.CaseIterable, Swift.Identifiable, Swift.Codable {
   case emitidas
   case recibidas
   public var name: Swift.String {
@@ -161,7 +152,7 @@ public enum OperationType : Swift.String, Swift.CaseIterable, Swift.Identifiable
     get
   }
 }
-public enum EndPoint : Swift.String, Swift.CaseIterable, Swift.Identifiable {
+public enum EndPoint : Swift.String, Swift.CaseIterable, Swift.Identifiable, Swift.Codable {
   case facturas
   case retenciones
   public var id: Swift.String {
@@ -178,7 +169,7 @@ public enum EndPoint : Swift.String, Swift.CaseIterable, Swift.Identifiable {
     get
   }
 }
-public struct InvoiceParams {
+public struct InvoiceParams : Swift.Codable {
   public var operation: DescargaMasivaSATKit.OperationType
   public var startDate: Foundation.Date
   public var endDate: Foundation.Date
@@ -191,6 +182,19 @@ public struct InvoiceParams {
     get
   }
   public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CertUtils {
+  public init(rfc: Swift.String, fullName: Swift.String) async throws
+  public init(certData: Foundation.Data, keyData: Foundation.Data) async throws
+  public func getIssuerName() throws -> Swift.String
+  public func getSerialNumber() throws -> Swift.String
+  public func getSubjectUniqueIdentifier() throws -> Swift.String
+  public func getCommonName() throws -> Swift.String
+  public func createSignature(for info: Foundation.Data) throws -> Swift.String
+  public func getSHA1Hash(for data: Foundation.Data) -> Swift.String
+  public func getBase64StringCert() -> Swift.String
 }
 extension DescargaMasivaSATKit.QueryType : Swift.Equatable {}
 extension DescargaMasivaSATKit.QueryType : Swift.Hashable {}

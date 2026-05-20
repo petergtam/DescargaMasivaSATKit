@@ -9,12 +9,12 @@ import Foundation
 
 /// A type to store the response of the Download SOAP API
 public struct DownloadResponse: Codable {
-    public var result: DownloadResult
-    public var contents: [String]?
+  public var result: DownloadResult
+  public var contents: [String]?
 }
 
 /// A type with the result information from the Download SOAP API
 public struct DownloadResult: Codable {
-    public var CodEstatus: Int
-    public var Mensaje: String
+  public var CodEstatus: Int
+  public var Mensaje: String
 }

@@ -2,16 +2,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "Descarga Masiva SAT Kit",
-    products: [
-        .library(
-            name: "DescargaMasivaSATKit",
-            targets: ["DescargaMasivaSATKit"])
-    ],
-    targets: [
-        .binaryTarget(
-            name: "DescargaMasivaSATKit",
-            path: "xcframeworks/DescargaMasivaSATKit.xcframework"
-        )
-    ]
+  name: "Descarga Masiva SAT Kit",
+  platforms: [.macOS(.v12)],
+  products: [
+    .library(
+      name: "DescargaMasivaSATKit",
+      targets: ["DescargaMasivaSATKit"])
+  ],
+  targets: [
+    .binaryTarget(
+      name: "DescargaMasivaSATKit",
+      path: "xcframeworks/DescargaMasivaSATKit.xcframework"
+    )
+  ]
 )
